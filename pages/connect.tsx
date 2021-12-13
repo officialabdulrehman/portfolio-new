@@ -1,11 +1,11 @@
 import MainLayout from "../layouts/Main/Main"
 
-interface HomeProps {}
+interface ConnectProps {}
 
-const Home: React.FC <HomeProps> = () => {
+const Connect: React.FC <ConnectProps> = () => {
   return (
-    <MainLayout pageTitle="Home">
-        <h1>NizTheDev</h1>
+    <MainLayout pageTitle="Connect">
+        <h1>Connect</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, quibusdam. Itaque harum
           iusto dolore repellendus commodi mollitia perferendis ad possimus esse, id, sapiente,
@@ -15,4 +15,4 @@ const Home: React.FC <HomeProps> = () => {
   )
 }
 
-export default Home
+export default Connect

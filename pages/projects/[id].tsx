@@ -1,11 +1,11 @@
-import MainLayout from "../layouts/Main/Main"
+import MainLayout from "../../layouts/Main/Main"
 
-interface HomeProps {}
+interface ProjectProps {}
 
-const Home: React.FC <HomeProps> = () => {
+const Project: React.FC <ProjectProps> = () => {
   return (
-    <MainLayout pageTitle="Home">
-        <h1>NizTheDev</h1>
+    <MainLayout pageTitle="About">
+        <h1>Project</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, quibusdam. Itaque harum
           iusto dolore repellendus commodi mollitia perferendis ad possimus esse, id, sapiente,
@@ -15,4 +15,4 @@ const Home: React.FC <HomeProps> = () => {
   )
 }
 
-export default Home
+export default Project
