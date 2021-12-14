@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
-// import Header from '../../components/Header'
+import Header from '../../components/Header/Header'
 // import Footer from '../../components/Footer'
-import MainLayoutStyles from './MainLayout.styles'
+import MainLayoutElement from './MainLayoutElement.styles'
 
 interface LayoutProps {
   pageTitle: string
@@ -23,11 +23,11 @@ const MainLayout: React.FC<LayoutProps> = ({ pageTitle, description = 'NizTheDev
 
         <title>NizTheDev | {pageTitle}</title>
       </Head>
-      <MainLayoutStyles>
-        {/* <Header /> */}
+      <MainLayoutElement>
+        <Header />
         <main>{children}</main>
         {/* <Footer /> */}
-      </MainLayoutStyles>
+      </MainLayoutElement>
     </>
   )
 }
