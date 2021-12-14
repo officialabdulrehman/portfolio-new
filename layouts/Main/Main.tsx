@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import Header from '../../components/Header/Header'
+// import Header from '../../components/Header/Header'
 // import Footer from '../../components/Footer'
 import MainLayoutElement from './MainLayoutElement.styles'
 
@@ -24,7 +24,7 @@ const MainLayout: React.FC<LayoutProps> = ({ pageTitle, description = 'NizTheDev
         <title>NizTheDev | {pageTitle}</title>
       </Head>
       <MainLayoutElement>
-        <Header />
+        {/* <Header /> */}
         <main>{children}</main>
         {/* <Footer /> */}
       </MainLayoutElement>

@@ -1,5 +1,5 @@
 import React from "react"
-import HeaderElement from "./Header"
+import HeaderElement from "./Header.styles"
 
 interface HeaderProps { }
 
