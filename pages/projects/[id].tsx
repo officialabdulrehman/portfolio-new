@@ -1,4 +1,4 @@
-import MainLayout from "../../layouts/Main/Main"
+import MainLayout from "../../layouts/MainLayout/MainLayout"
 
 interface ProjectProps {}
 

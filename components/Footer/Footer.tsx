@@ -1,5 +1,5 @@
 import React from "react"
-import FooterElement from "./Footer"
+import FooterElement from "./Footer.styles"
 
 interface FooterProps { }
 
