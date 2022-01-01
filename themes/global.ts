@@ -1,8 +1,8 @@
-import { createGlobalStyle } from 'styled-components'
-import { themeI } from './themeI'
+import { createGlobalStyle } from "styled-components";
+import { themeI } from "./themeI";
 
 interface Props {
-  theme: themeI
+  theme: themeI;
 }
 
 const GlobalStyle = createGlobalStyle<Props>`
@@ -23,11 +23,12 @@ const GlobalStyle = createGlobalStyle<Props>`
   }
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.shade0}
+    color: ${({ theme }) => theme.shade15};
+    border-radius: 0.3rem;
   }
   ul {
     list-style: none
   }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

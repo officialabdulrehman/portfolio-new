@@ -1,15 +1,23 @@
-import React from 'react'
-import Head from 'next/head'
-import Header from '../../components/Header/Header'
-import Footer from '../../components/Footer/Footer'
-import MainLayoutElement from './MainLayoutElement.styles'
+import React from "react";
+import Head from "next/head";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
+import MainLayoutElement from "./MainLayoutElement.styles";
 
 interface LayoutProps {
-  pageTitle: string
-  description?: string
+  pageTitle: string;
+  description?: string;
+  theme: string;
+  setTheme: (theme: string) => {};
 }
 
-const MainLayout: React.FC<LayoutProps> = ({ pageTitle, description = 'NizTheDev Portfolio', children }) => {
+const MainLayout: React.FC<LayoutProps> = ({
+  pageTitle,
+  description = "NizTheDev Portfolio",
+  children,
+  theme,
+  setTheme,
+}) => {
   return (
     <>
       <Head>
@@ -24,12 +32,12 @@ const MainLayout: React.FC<LayoutProps> = ({ pageTitle, description = 'NizTheDev
         <title>NizTheDev | {pageTitle}</title>
       </Head>
       <MainLayoutElement>
-        <Header />
+        <Header theme={theme} setTheme={setTheme} />
         <main>{children}</main>
         <Footer />
       </MainLayoutElement>
     </>
-  )
-}
+  );
+};
 
-export default MainLayout
+export default MainLayout;
