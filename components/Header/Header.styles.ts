@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { themeI } from "../../themes/themeI";
 
-export const HeaderElement = styled.div`
+export const HeaderElement = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: ${({ theme }: { theme: themeI }) => theme.shade2};
+  background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
   /* box-shadow: 0 5px 10px ${({ theme }: { theme: themeI }) =>
     theme.shade5}; */
   /* border-bottom: 1px solid ${({ theme }: { theme: themeI }) =>
@@ -23,8 +23,9 @@ export const AnchorElement = styled.a`
   margin: 0rem 1rem;
   cursor: pointer;
   &:hover {
-    background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
+    background-color: ${({ theme }: { theme: themeI }) => theme.shade2};
   }
+  letter-spacing: 0.08rem;
 `;
 
 export const ThemeIconElement = styled.div`

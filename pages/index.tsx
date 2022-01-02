@@ -1,3 +1,4 @@
+import Showcase from "../components/Home/Showcase/Showcase";
 import MainLayout from "../layouts/MainLayout/MainLayout";
 
 interface HomeProps {
@@ -8,6 +9,7 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ theme, setTheme }) => {
   return (
     <MainLayout pageTitle="Home" theme={theme} setTheme={setTheme}>
+      <Showcase />
       <h1>NizTheDev</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,

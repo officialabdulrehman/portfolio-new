@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle<Props>`
     font-size: calc(14px + .3vw);
     font-family: 'Poppins', 'Fira Sans', 'Lato', sans-serif;
     line-height: 1.7;
-    background: ${({ theme }) => theme.shade0};
+    background: ${({ theme }) => theme.shade1};
     color: ${({ theme }) => theme.shade15};
   }
   a {
@@ -31,9 +31,12 @@ const GlobalStyle = createGlobalStyle<Props>`
   }
   .scrolled{
   position: fixed;
+  z-index: 2;
   width: 100%;
-  background-color: ${({ theme }) => theme.shade0};
+  /* top: 0;
+  left: 0; */
   box-shadow: 0 5px 10px ${({ theme }) => theme.shade5};
+  background-color: ${({ theme }) => theme.shade0};
   border-bottom: none;
 }
 .scrolled > nav > a:hover {
@@ -41,10 +44,25 @@ const GlobalStyle = createGlobalStyle<Props>`
   background-color: ${({ theme }) => theme.shade2};
 }
 .activeLink {
-  background-color: ${({ theme }) => theme.shade2};
+  /* background-color: ${({ theme }) => theme.shade2}; */
+  color: ${({ theme }) => theme.primaryLight};
 }
 .activeLinkScrolled {
   background-color: ${({ theme }) => theme.shade0};
+}
+
+.showcaseRight{
+  /* height: 480px; */
+  /* width: 400px; */
+  /* border-radius: 0.5rem; */
+  /* object-fit: cover;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 1px 2px 10px  #111;
+  position: static; */
+  object-fit: cover;
+  z-index: 1;
 }
 `;
 
