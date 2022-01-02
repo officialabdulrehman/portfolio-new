@@ -15,6 +15,69 @@ const About: React.FC<AboutProps> = ({ theme, setTheme }) => {
         perferendis ad possimus esse, id, sapiente, beatae non facere veniam
         magni placeat autem!
       </p>
+      <h1>About</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
+        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
+        magni placeat autem!
+      </p>
+      <h1>About</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
+        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
+        magni placeat autem!
+      </p>
+      <h1>About</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
+        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
+        magni placeat autem!
+      </p>
+      <h1>About</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
+        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
+        magni placeat autem!
+      </p>
+      <h1>About</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
+        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
+        magni placeat autem!
+      </p>
+      <h1>About</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
+        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
+        magni placeat autem!
+      </p>
+      <h1>About</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
+        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
+        magni placeat autem!
+      </p>
+      <h1>About</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
+        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
+        magni placeat autem!
+      </p>
+      <h1>About</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
+        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
+        magni placeat autem!
+      </p>
     </MainLayout>
   );
 };

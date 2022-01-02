@@ -15,8 +15,8 @@ const GlobalStyle = createGlobalStyle<Props>`
     padding: 0;
   }
   body {
-    font-size: calc(14px + .5vw);
-    font-family: 'Fira Sans', 'Lato', sans-serif;
+    font-size: calc(14px + .3vw);
+    font-family: 'Poppins', 'Fira Sans', 'Lato', sans-serif;
     line-height: 1.7;
     background: ${({ theme }) => theme.shade0};
     color: ${({ theme }) => theme.shade15};
@@ -29,6 +29,23 @@ const GlobalStyle = createGlobalStyle<Props>`
   ul {
     list-style: none
   }
+  .scrolled{
+  position: fixed;
+  width: 100%;
+  background-color: ${({ theme }) => theme.shade0};
+  box-shadow: 0 5px 10px ${({ theme }) => theme.shade5};
+  border-bottom: none;
+}
+.scrolled > nav > a:hover {
+  /* background-color: #03a9f4; */
+  background-color: ${({ theme }) => theme.shade2};
+}
+.activeLink {
+  background-color: ${({ theme }) => theme.shade2};
+}
+.activeLinkScrolled {
+  background-color: ${({ theme }) => theme.shade0};
+}
 `;
 
 export default GlobalStyle;
