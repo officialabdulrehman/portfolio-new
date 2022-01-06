@@ -17,9 +17,9 @@ interface ShowcaseProps {}
 const Showcase: React.FC<ShowcaseProps> = () => {
   return (
     <ShowcaseElement>
-      <ShowcaseLeftElement className="showcaseLeft">
-        <ShowcaseLeftHeading className="showcaseHeading">
-          <UnderlineElement className="underline" />
+      <ShowcaseLeftElement>
+        <ShowcaseLeftHeading>
+          <UnderlineElement />
           <h1>I'm Abdul Rehman Nizamani</h1>
         </ShowcaseLeftHeading>
         <h4>Fullstack Engineer from Pakistan!</h4>
@@ -27,8 +27,8 @@ const Showcase: React.FC<ShowcaseProps> = () => {
           Keen learner | Focused | Great at problem solving | Efficiency
           oriented | Always on lookout for new stuff!
         </h4>
-        <h4>Weclome to my Profile!</h4>
-        <IconsElement className="icons">
+        <h4>Welcome to my Profile!</h4>
+        <IconsElement>
           <Link href="https://www.facebook.com/nizthedev">
             <AnchorIconElement
               href="https://www.facebook.com/nizthedev"

@@ -19,12 +19,16 @@ const GlobalStyle = createGlobalStyle<Props>`
     font-family: 'Poppins', 'Fira Sans', 'Lato', sans-serif;
     line-height: 1.7;
     background: ${({ theme }) => theme.shade1};
-    color: ${({ theme }) => theme.shade15};
+    color: ${({ theme }) => theme.shade11};
+    letter-spacing: 0.05rem;
   }
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.shade15};
+    color: ${({ theme }) => theme.shade11};
     border-radius: 0.3rem;
+  }
+  h1,h2,h3,h4,h5 {
+    color: ${({ theme }) => theme.shade12};
   }
   ul {
     list-style: none
@@ -44,8 +48,9 @@ const GlobalStyle = createGlobalStyle<Props>`
   background-color: ${({ theme }) => theme.shade2};
 }
 .activeLink {
-  /* background-color: ${({ theme }) => theme.shade2}; */
   color: ${({ theme }) => theme.primaryLight};
+  color: ${({ theme }) => theme.primaryLight};
+  /* background-color: ${({ theme }) => theme.shade2}; */
 }
 .activeLinkScrolled {
   background-color: ${({ theme }) => theme.shade0};

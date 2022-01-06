@@ -61,6 +61,7 @@ export const HireElement = styled.a`
 export const UnderlineElement = styled.div`
   width: 2.6rem;
   height: 0.25rem;
+  border-radius: 0.3rem;
   background-color: ${({ theme }: { theme: themeI }) => theme.primary};
 `;
 

@@ -1,14 +1,14 @@
-import React from "react"
-import FooterElement from "./Footer.styles"
+import React from "react";
+import FooterElement from "./Footer.styles";
 
-interface FooterProps { }
+interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = () => {
   return (
     <FooterElement>
-      Footer
+      <p>hello@nizthedev.com &copy; NizTheDev. All rights reserved.</p>
     </FooterElement>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
