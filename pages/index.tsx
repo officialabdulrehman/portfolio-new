@@ -1,4 +1,4 @@
-import Experience from "../components/Home/Experience/Experience";
+import Experience from "../components/Home/Experiences/Experiences";
 import Showcase from "../components/Home/Showcase/Showcase";
 import Skills from "../components/Home/Skills/Skills";
 import MainLayout from "../layouts/MainLayout/MainLayout";

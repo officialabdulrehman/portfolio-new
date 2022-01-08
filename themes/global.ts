@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle<Props>`
     border-radius: 0.3rem;
   }
   h1,h2,h3,h4,h5 {
-    color: ${({ theme }) => theme.shade12};
+    /* color: ${({ theme }) => theme.shade12}; */
   }
   ul {
     list-style: none
@@ -39,7 +39,7 @@ const GlobalStyle = createGlobalStyle<Props>`
   width: 100%;
   /* top: 0;
   left: 0; */
-  box-shadow: 0 5px 10px ${({ theme }) => theme.shade5};
+  box-shadow: 0 5px 20px ${({ theme }) => theme.shade2};
   background-color: ${({ theme }) => theme.shade0};
   border-bottom: none;
 }
@@ -49,7 +49,7 @@ const GlobalStyle = createGlobalStyle<Props>`
 }
 .activeLink {
   color: ${({ theme }) => theme.primaryLight};
-  color: ${({ theme }) => theme.primaryLight};
+  /* color: ${({ theme }) => theme.primaryLight}; */
   /* background-color: ${({ theme }) => theme.shade2}; */
 }
 .activeLinkScrolled {

@@ -1,3 +1,7 @@
+// import { themeI } from "../../../themes/themeI";
+import { skills } from "../../../data/skills";
+import { SkillI } from "../../../types/skillI";
+import Skill from "../../Skill/Skill";
 import {
   SkillsElement,
   SkillsLeftElement,
@@ -11,29 +15,19 @@ const Skills: React.FC<SkillsProps> = () => {
   return (
     <SkillsElement>
       <SkillsLeftElement>
-        <h4>NodeJS</h4>
-        <h5>Good</h5>
-        <p>April/2020 to Present</p>
-        <br />
-        <h4>NodeJS</h4>
-        <h5>Good</h5>
-        <p>April/2020 to Present</p>
-        <br />
-        <h4>NodeJS</h4>
-        <h5>Good</h5>
-        <p>April/2020 to Present</p>
-        <br />
-        <h4>NodeJS</h4>
-        <h5>Good</h5>
-        <p>April/2020 to Present</p>
-        <br />
-        <h4>NodeJS</h4>
-        <h5>Good</h5>
-        <p>April/2020 to Present</p>
-        <br />
+        {skills.map(
+          ({ skillName, skillLevel, percentage }: SkillI, index: number) => (
+            <Skill
+              key={index}
+              skillName={skillName}
+              skillLevel={skillLevel}
+              width={percentage}
+            />
+          )
+        )}
       </SkillsLeftElement>
       <SkillsRightElement>
-        <h2>Skills</h2>
+        <h1>Skills</h1>
         <UnderlineElement />
       </SkillsRightElement>
     </SkillsElement>

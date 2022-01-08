@@ -13,6 +13,7 @@ const FooterElement = styled.div`
     letter-spacing: 0.08rem;
     font-weight: 400;
     font-size: 0.9em;
+    cursor: default;
   }
 `;
 

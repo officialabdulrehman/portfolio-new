@@ -8,7 +8,7 @@ export const ShowcaseElement = styled.div`
   padding: 1rem 2rem;
   background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
 
-  height: 93vh;
+  min-height: 93vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
