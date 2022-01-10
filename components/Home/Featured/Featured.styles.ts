@@ -35,7 +35,7 @@ export const FeaturedRightElement = styled.div`
 `;
 
 export const UnderlineElement = styled.div`
-  width: 9rem;
+  width: 7rem;
   height: 0.25rem;
   border-radius: 0.3rem;
   margin-left: -10px;

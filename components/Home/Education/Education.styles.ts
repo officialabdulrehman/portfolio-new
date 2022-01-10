@@ -35,9 +35,9 @@ export const EducationRightElement = styled.div`
 `;
 
 export const UnderlineElement = styled.div`
-  width: 4.2rem;
+  width: 8.5rem;
   height: 0.25rem;
   border-radius: 0.3rem;
-  margin-left: -10px;
+  margin-left: -12px;
   background-color: ${({ theme }: { theme: themeI }) => theme.primary};
 `;
