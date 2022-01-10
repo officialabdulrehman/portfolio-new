@@ -20,8 +20,8 @@ const LightIcon: React.FC<LightIconProps> = () => {
         gradientUnits="userSpaceOnUse"
         spreadMethod="reflect"
       >
-        <stop offset="0" stop-color="#6dc7ff" />
-        <stop offset="1" stop-color="#e6abff" />
+        <stop offset="0" stopColor="#6dc7ff" />
+        <stop offset="1" stopColor="#e6abff" />
       </linearGradient>
       <path
         fill="url(#tXu54Kp6YqZVIlGnJHOxOa)"
@@ -36,8 +36,8 @@ const LightIcon: React.FC<LightIconProps> = () => {
         gradientUnits="userSpaceOnUse"
         spreadMethod="reflect"
       >
-        <stop offset="0" stop-color="#1a6dff" />
-        <stop offset="1" stop-color="#c822ff" />
+        <stop offset="0" stopColor="#1a6dff" />
+        <stop offset="1" stopColor="#c822ff" />
       </linearGradient>
       <path
         fill="url(#tXu54Kp6YqZVIlGnJHOxOb)"
@@ -52,8 +52,8 @@ const LightIcon: React.FC<LightIconProps> = () => {
         gradientUnits="userSpaceOnUse"
         spreadMethod="reflect"
       >
-        <stop offset="0" stop-color="#1a6dff" />
-        <stop offset="1" stop-color="#c822ff" />
+        <stop offset="0" stopColor="#1a6dff" />
+        <stop offset="1" stopColor="#c822ff" />
       </linearGradient>
       <path
         fill="url(#tXu54Kp6YqZVIlGnJHOxOc)"
@@ -68,8 +68,8 @@ const LightIcon: React.FC<LightIconProps> = () => {
         gradientUnits="userSpaceOnUse"
         spreadMethod="reflect"
       >
-        <stop offset="0" stop-color="#1a6dff" />
-        <stop offset="1" stop-color="#c822ff" />
+        <stop offset="0" stopColor="#1a6dff" />
+        <stop offset="1" stopColor="#c822ff" />
       </linearGradient>
       <path
         fill="url(#tXu54Kp6YqZVIlGnJHOxOd)"
@@ -84,8 +84,8 @@ const LightIcon: React.FC<LightIconProps> = () => {
         gradientUnits="userSpaceOnUse"
         spreadMethod="reflect"
       >
-        <stop offset="0" stop-color="#1a6dff" />
-        <stop offset="1" stop-color="#c822ff" />
+        <stop offset="0" stopColor="#1a6dff" />
+        <stop offset="1" stopColor="#c822ff" />
       </linearGradient>
       <path
         fill="url(#tXu54Kp6YqZVIlGnJHOxOe)"

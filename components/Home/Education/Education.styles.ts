@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { themeI } from "../../../themes/themeI";
 
-export const ExperiencesElement = styled.div`
+export const EducationElement = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
+  background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
 
   min-height: 93vh;
   display: flex;
@@ -15,16 +15,7 @@ export const ExperiencesElement = styled.div`
   width: 100%;
 `;
 
-export const ExperiencesLeftElement = styled.div`
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: default;
-`;
-
-export const ExperiencesRightElement = styled.div`
+export const EducationLeftElement = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -34,8 +25,17 @@ export const ExperiencesRightElement = styled.div`
   padding: 2rem 0;
 `;
 
+export const EducationRightElement = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+`;
+
 export const UnderlineElement = styled.div`
-  width: 9rem;
+  width: 4.2rem;
   height: 0.25rem;
   border-radius: 0.3rem;
   margin-left: -10px;

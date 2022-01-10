@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { themeI } from "../../../themes/themeI";
 
-export const ExperiencesElement = styled.div`
+export const FeaturedElement = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,7 +15,7 @@ export const ExperiencesElement = styled.div`
   width: 100%;
 `;
 
-export const ExperiencesLeftElement = styled.div`
+export const FeaturedLeftElement = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@ export const ExperiencesLeftElement = styled.div`
   cursor: default;
 `;
 
-export const ExperiencesRightElement = styled.div`
+export const FeaturedRightElement = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -40,4 +40,32 @@ export const UnderlineElement = styled.div`
   border-radius: 0.3rem;
   margin-left: -10px;
   background-color: ${({ theme }: { theme: themeI }) => theme.primary};
+`;
+
+export const SingleFeatured = styled.a`
+  border-radius: 0.3rem;
+  padding: 1rem;
+  width: fit-content;
+  min-width: 350px;
+  cursor: pointer;
+  background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
+  &:hover {
+    background-color: ${({ theme }: { theme: themeI }) => theme.primary};
+    color: ${({ theme }: { theme: themeI }) => theme.shade0};
+  }
+  h4 {
+  }
+  h5 {
+    /* letter-spacing: 0.01rem; */
+  }
+  p {
+    /* font-size: calc(12px + 0.3vw); */
+    /* letter-spacing: 0.01rem;
+    font-weight: 600; */
+    span {
+      font-size: calc(8px + 0.3vw);
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+  }
 `;
