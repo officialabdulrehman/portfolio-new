@@ -6,11 +6,9 @@ export const HeaderElement = styled.header`
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
+  background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
   /* box-shadow: 0 5px 10px ${({ theme }: { theme: themeI }) =>
     theme.shade5}; */
-  /* border-bottom: 1px solid ${({ theme }: { theme: themeI }) =>
-    theme.shade10}; */
 `;
 
 export const NavElement = styled.nav`

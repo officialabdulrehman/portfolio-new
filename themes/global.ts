@@ -44,7 +44,6 @@ const GlobalStyle = createGlobalStyle<Props>`
   border-bottom: none;
 }
 .scrolled > nav > a:hover {
-  /* background-color: #03a9f4; */
   background-color: ${({ theme }) => theme.shade2};
 }
 .activeLink {
