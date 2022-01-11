@@ -1,14 +1,12 @@
 import styled from "styled-components";
 import { themeI } from "../../themes/themeI";
 
-export const SingleExperienceElement = styled.a`
+export const SingleEducationElement = styled.a`
   border-radius: 0.3rem;
   padding: 1rem;
-  width: fit-content;
   min-width: 350px;
-  /* box-shadow: 0 5px 20px ${({ theme }) => theme.shade1}; */
   cursor: pointer;
-  background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
+  background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
   &:hover {
     background-color: ${({ theme }: { theme: themeI }) => theme.primary};
     color: ${({ theme }: { theme: themeI }) => theme.shade0};
@@ -30,19 +28,12 @@ export const SingleExperienceElement = styled.a`
   h4 {
     letter-spacing: 0.03rem;
     font-weight: 400;
-    color: ${({ theme }: { theme: themeI }) => theme.shade10};
+    color: ${({ theme }: { theme: themeI }) => theme.shade9};
   }
   p {
-    color: ${({ theme }: { theme: themeI }) => theme.shade8};
+    color: ${({ theme }: { theme: themeI }) => theme.shade10};
     font-size: calc(12px + 0.3vw);
     font-weight: 600;
     text-align: end;
-    font-weight: 400;
-    letter-spacing: 0.01rem;
-    span {
-      font-size: calc(8px + 0.3vw);
-      font-weight: 400;
-      letter-spacing: 0;
-    }
   }
 `;

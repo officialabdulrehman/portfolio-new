@@ -8,6 +8,23 @@ export const SingleSkillElement = styled.a`
   min-width: 300px;
   cursor: pointer;
   background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
+  &:hover h3 {
+    color: ${({ theme }: { theme: themeI }) => theme.shade0};
+  }
+  &:hover h4 {
+    color: ${({ theme }: { theme: themeI }) => theme.shade0};
+  }
+  h3 {
+    color: ${({ theme }: { theme: themeI }) => theme.primary};
+    letter-spacing: 0.08rem;
+    font-weight: 400;
+  }
+  h4 {
+    letter-spacing: 0.03rem;
+    font-weight: 400;
+    color: ${({ theme }: { theme: themeI }) => theme.shade9};
+    text-align: end;
+  }
   &:hover {
     background-color: ${({ theme }: { theme: themeI }) => theme.primary};
     color: ${({ theme }: { theme: themeI }) => theme.shade0};

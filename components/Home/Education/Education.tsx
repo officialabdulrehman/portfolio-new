@@ -1,3 +1,6 @@
+import { educations } from "../../../data/education";
+import { EducationI } from "../../../types/educationI";
+import SingleEducation from "../../SingleEducation/SingleEducation";
 import {
   EducationElement,
   EducationLeftElement,
@@ -10,7 +13,19 @@ interface EducationProps {}
 const Education: React.FC<EducationProps> = () => {
   return (
     <EducationElement>
-      <EducationLeftElement>Left</EducationLeftElement>
+      <EducationLeftElement>
+        {educations.map(
+          ({ name, level, city, country }: EducationI, index: number) => (
+            <SingleEducation
+              key={index}
+              name={name}
+              level={level}
+              city={city}
+              country={country}
+            />
+          )
+        )}
+      </EducationLeftElement>
       <EducationRightElement>
         <h1>Education</h1>
         <UnderlineElement />
