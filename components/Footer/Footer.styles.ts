@@ -14,6 +14,17 @@ const FooterElement = styled.div`
     font-weight: 400;
     font-size: 0.9em;
     cursor: default;
+
+    a {
+      display: inline;
+      &:hover {
+        color: ${({ theme }: { theme: themeI }) => theme.primary};
+      }
+    }
+
+    span {
+      color: ${({ theme }: { theme: themeI }) => theme.primary};
+    }
   }
 `;
 
