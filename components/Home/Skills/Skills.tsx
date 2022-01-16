@@ -21,7 +21,7 @@ const Skills: React.FC<SkillsProps> = () => {
               key={index}
               skillName={skillName}
               skillLevel={skillLevel}
-              width={percentage}
+              percentage={percentage}
             />
           )
         )}

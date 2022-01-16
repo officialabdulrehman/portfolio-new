@@ -7,12 +7,12 @@ import {
 } from "./Skill.styles";
 
 interface SkillProps extends SkillI {
-  width: number;
+  percentage: number;
   skillName: string;
   skillLevel: string;
 }
 
-const Skill: React.FC<SkillProps> = ({ width, skillName, skillLevel }) => {
+const Skill: React.FC<SkillProps> = ({ percentage, skillName, skillLevel }) => {
   return (
     <SingleSkillElement>
       <h3>{skillName}</h3>
@@ -20,7 +20,7 @@ const Skill: React.FC<SkillProps> = ({ width, skillName, skillLevel }) => {
       <SkillBarElement>
         <SkillBarInnerElement
           style={{
-            width: `${width}%`,
+            width: `${percentage}%`,
           }}
         />
       </SkillBarElement>

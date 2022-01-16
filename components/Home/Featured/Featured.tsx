@@ -1,13 +1,10 @@
 import { featured } from "../../../data/featured";
-import { ExperienceI } from "../../../types/experienceI";
 import { FeaturedI } from "../../../types/featuredI";
-import { DateDiff, extractDate } from "../../../util/common";
 import SingleFeatured from "../../SingleFeatured/SingleFeatured";
 import {
   FeaturedElement,
   FeaturedLeftElement,
   FeaturedRightElement,
-  // SingleFeatured,
   UnderlineElement,
 } from "./Featured.styles";
 
