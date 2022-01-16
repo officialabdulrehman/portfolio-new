@@ -15,10 +15,6 @@ const Experiences: React.FC<ExperiencesProps> = () => {
   return (
     <ExperiencesElement>
       <ExperiencesLeftElement>
-        <h1>Experiences</h1>
-        <UnderlineElement />
-      </ExperiencesLeftElement>
-      <ExperiencesRightElement>
         {experiences.map(
           ({ name, role, startedAt, endedAt }: ExperienceI, index: number) => (
             <SingleExperience
@@ -38,6 +34,10 @@ const Experiences: React.FC<ExperiencesProps> = () => {
             </SingleExperience>
           )
         )}
+      </ExperiencesLeftElement>
+      <ExperiencesRightElement>
+        <h1>Experiences</h1>
+        <UnderlineElement />
       </ExperiencesRightElement>
     </ExperiencesElement>
   );

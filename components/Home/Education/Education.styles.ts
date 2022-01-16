@@ -6,7 +6,7 @@ export const EducationElement = styled.div`
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
+  background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
 
   min-height: 93vh;
   display: flex;
@@ -21,8 +21,7 @@ export const EducationLeftElement = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  padding: 2rem 0;
+  cursor: default;
 `;
 
 export const EducationRightElement = styled.div`
@@ -31,7 +30,8 @@ export const EducationRightElement = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  cursor: default;
+  gap: 2rem;
+  padding: 2rem 0;
 `;
 
 export const UnderlineElement = styled.div`

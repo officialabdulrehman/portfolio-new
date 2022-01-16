@@ -14,6 +14,10 @@ const Education: React.FC<EducationProps> = () => {
   return (
     <EducationElement>
       <EducationLeftElement>
+        <h1>Education</h1>
+        <UnderlineElement />
+      </EducationLeftElement>
+      <EducationRightElement>
         {educations.map(
           ({ name, level, city, country }: EducationI, index: number) => (
             <SingleEducation
@@ -25,10 +29,6 @@ const Education: React.FC<EducationProps> = () => {
             />
           )
         )}
-      </EducationLeftElement>
-      <EducationRightElement>
-        <h1>Education</h1>
-        <UnderlineElement />
       </EducationRightElement>
     </EducationElement>
   );

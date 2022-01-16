@@ -48,7 +48,7 @@ const GlobalStyle = createGlobalStyle<Props>`
 }
 .activeLink {
   color: ${({ theme }) => theme.primaryLight};
-  /* color: ${({ theme }) => theme.primaryLight}; */
+  color: ${({ theme }) => theme.primaryLight};
   /* background-color: ${({ theme }) => theme.shade2}; */
 }
 .activeLinkScrolled {

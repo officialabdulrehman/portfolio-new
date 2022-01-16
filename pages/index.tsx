@@ -14,10 +14,10 @@ const Home: React.FC<HomeProps> = ({ theme, setTheme }) => {
   return (
     <MainLayout pageTitle="Home" theme={theme} setTheme={setTheme}>
       <Showcase />
-      <Experience />
-      <Skills />
       <Featured />
+      <Experience />
       <Education />
+      <Skills />
     </MainLayout>
   );
 };

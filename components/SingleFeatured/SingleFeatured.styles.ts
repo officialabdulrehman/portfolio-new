@@ -1,22 +1,38 @@
 import styled from "styled-components";
 import { themeI } from "../../themes/themeI";
 
-export const SingleExperienceElement = styled.a`
+const genRandomColor = () => {
+  const color: any = `hsl(${360 * Math.random()}, ${
+    15 + 70 * Math.random()
+  }%, ${60 + 10 * Math.random()}%)`;
+
+  return color;
+};
+// const color: any = `hsl(${360 * Math.random()}, ${15 + 70 * Math.random()}%, ${
+//   60 + 10 * Math.random()
+// }%)`;
+
+const color = genRandomColor;
+
+export const SingleFeaturedElement = styled.a`
   border-radius: 0.3rem;
   padding: 1rem;
   width: fit-content;
   min-width: 350px;
   /* box-shadow: 0 5px 20px ${({ theme }) => theme.shade1}; */
   cursor: pointer;
-  background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
+  background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
   &:hover {
-    background-color: ${({ theme }: { theme: themeI }) => theme.primary};
+    background: ${() => color};
     color: ${({ theme }: { theme: themeI }) => theme.shade0};
   }
   &:hover h3 {
     color: ${({ theme }: { theme: themeI }) => theme.shade0};
   }
   &:hover h4 {
+    color: ${({ theme }: { theme: themeI }) => theme.shade0};
+  }
+  &:hover h5 {
     color: ${({ theme }: { theme: themeI }) => theme.shade0};
   }
   &:hover p {
@@ -31,6 +47,12 @@ export const SingleExperienceElement = styled.a`
     letter-spacing: 0.03rem;
     font-weight: 400;
     color: ${({ theme }: { theme: themeI }) => theme.shade10};
+  }
+  h5 {
+    letter-spacing: 0.03rem;
+    color: ${() => {
+      return color;
+    }};
   }
   p {
     color: ${({ theme }: { theme: themeI }) => theme.shade8};

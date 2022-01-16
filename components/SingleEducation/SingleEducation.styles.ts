@@ -6,7 +6,7 @@ export const SingleEducationElement = styled.a`
   padding: 1rem;
   min-width: 350px;
   cursor: pointer;
-  background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
+  background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
   &:hover {
     background-color: ${({ theme }: { theme: themeI }) => theme.primary};
     color: ${({ theme }: { theme: themeI }) => theme.shade0};
