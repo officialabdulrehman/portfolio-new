@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle<Props>`
     font-size: calc(14px + .3vw);
     font-family: 'Poppins', 'Fira Sans', 'Lato', sans-serif;
     line-height: 1.7;
-    background: ${({ theme }) => theme.shade1};
+    background-color: ${({ theme }) => theme.shade1};
     color: ${({ theme }) => theme.shade11};
     letter-spacing: 0.05rem;
   }
@@ -47,7 +47,6 @@ const GlobalStyle = createGlobalStyle<Props>`
   background-color: ${({ theme }) => theme.shade2};
 }
 .activeLink {
-  color: ${({ theme }) => theme.primaryLight};
   color: ${({ theme }) => theme.primaryLight};
   /* background-color: ${({ theme }) => theme.shade2}; */
 }

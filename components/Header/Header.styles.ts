@@ -34,7 +34,7 @@ export const ThemeIconElement = styled.div`
   height: 30px;
   border-radius: 50%;
   cursor: pointer;
-  &:hover {
+  /* &:hover {
     background-color: ${({ theme }: { theme: themeI }) => theme.shade2};
-  }
+  } */
 `;
