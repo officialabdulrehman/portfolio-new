@@ -3,7 +3,7 @@ import React from "react";
 // import { ReactComponent as Light } from "../../../assets/icons/sun.svg";
 interface LightIconProps {}
 
-const LightIcon: React.FC<LightIconProps> = () => {
+export const LightIcon: React.FC<LightIconProps> = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
