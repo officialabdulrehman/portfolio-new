@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import DarkIcon from "../icons/DarkIcon/DarkIcon";
+// import DarkIcon from "../icons/DarkIcon/DarkIcon";
 import LightIcon from "../icons/LightIcon/LightIcon";
+import moon from "../../assets/icons/moon.png";
 import Logo from "../Logo/Logo";
 import {
   AnchorElement,
@@ -10,6 +11,7 @@ import {
   NavElement,
   ThemeIconElement,
 } from "./Header.styles";
+import Image from "next/image";
 
 interface HeaderProps {
   theme: string;
@@ -76,7 +78,7 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
       <ThemeIconElement
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
-        {theme === "dark" ? <LightIcon /> : <DarkIcon />}
+        {theme === "dark" ? <LightIcon /> : <Image src={moon} alt="Moon" />}
       </ThemeIconElement>
     </HeaderElement>
   );
