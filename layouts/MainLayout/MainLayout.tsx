@@ -16,9 +16,11 @@ const containerVariants = {
     opacity: 0,
     x: "-50vw",
     y: "-50vh",
+    // scale: 2,
   },
   visible: {
     opacity: 1,
+    // scale: 1,
     x: 0,
     y: 0,
     transition: {
@@ -31,6 +33,7 @@ const containerVariants = {
   exit: {
     x: "50vw",
     y: "50vh",
+    // scale: 2,
     opacity: 0,
     transition: {
       ease: "anticipate",

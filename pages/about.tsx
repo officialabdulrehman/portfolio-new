@@ -1,3 +1,9 @@
+import CommunityWork from "../components/About/CommunityWork/CommunityWork";
+import Hobbies from "../components/About/Hobbies/Hobbies";
+import Process from "../components/About/MyProcess/Process";
+import Personality from "../components/About/Personality/Personality";
+import Showcase from "../components/About/Showcase/Showcase";
+import Education from "../components/Home/Education/Education";
 import MainLayout from "../layouts/MainLayout/MainLayout";
 
 interface AboutProps {
@@ -8,76 +14,12 @@ interface AboutProps {
 const About: React.FC<AboutProps> = ({ theme, setTheme }) => {
   return (
     <MainLayout pageTitle="About" theme={theme} setTheme={setTheme}>
-      <h1>About</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
-        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
-        magni placeat autem!
-      </p>
-      <h1>About</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
-        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
-        magni placeat autem!
-      </p>
-      <h1>About</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
-        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
-        magni placeat autem!
-      </p>
-      <h1>About</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
-        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
-        magni placeat autem!
-      </p>
-      <h1>About</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
-        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
-        magni placeat autem!
-      </p>
-      <h1>About</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
-        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
-        magni placeat autem!
-      </p>
-      <h1>About</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
-        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
-        magni placeat autem!
-      </p>
-      <h1>About</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
-        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
-        magni placeat autem!
-      </p>
-      <h1>About</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
-        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
-        magni placeat autem!
-      </p>
-      <h1>About</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-        quibusdam. Itaque harum iusto dolore repellendus commodi mollitia
-        perferendis ad possimus esse, id, sapiente, beatae non facere veniam
-        magni placeat autem!
-      </p>
+      <Showcase />
+      <Process />
+      <Education />
+      <CommunityWork />
+      <Personality />
+      <Hobbies />
     </MainLayout>
   );
 };
