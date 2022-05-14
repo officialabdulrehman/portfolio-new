@@ -1,4 +1,4 @@
-import CommunityWork from "../components/About/CommunityWork/CommunityWork";
+import CommunityWorks from "../components/About/CommunityWorks/CommunityWorks";
 import Hobbies from "../components/About/Hobbies/Hobbies";
 import Process from "../components/About/MyProcess/Process";
 import Personality from "../components/About/Personality/Personality";
@@ -17,7 +17,7 @@ const About: React.FC<AboutProps> = ({ theme, setTheme }) => {
       <Showcase />
       <Process />
       <Education />
-      <CommunityWork />
+      <CommunityWorks />
       <Personality />
       <Hobbies />
     </MainLayout>

@@ -14,14 +14,11 @@ interface LayoutProps {
 const containerVariants = {
   hidden: {
     opacity: 0,
-    x: "-50vw",
-    y: "-50vh",
-    // scale: 2,
+    y: "50vh",
+    scale: 1,
   },
   visible: {
     opacity: 1,
-    // scale: 1,
-    x: 0,
     y: 0,
     transition: {
       duration: 1,
@@ -31,9 +28,7 @@ const containerVariants = {
     },
   },
   exit: {
-    x: "50vw",
-    y: "50vh",
-    // scale: 2,
+    y: "-50vh",
     opacity: 0,
     transition: {
       ease: "anticipate",
