@@ -1,4 +1,5 @@
 // import { themeI } from "../../../themes/themeI";
+import Link from "next/link";
 import { CommunityWorkI } from "../../types/communityWorkI";
 import {
   SingleCommunityWorkElement,
@@ -11,8 +12,9 @@ interface CommunityWorkProps extends CommunityWorkI {}
 const CommunityWork: React.FC<CommunityWorkProps> = ({
   name,
   role,
-  work,
-  date,
+  location,
+  startDate,
+  endDate,
   duration,
   links,
 }) => {
@@ -20,6 +22,12 @@ const CommunityWork: React.FC<CommunityWorkProps> = ({
     <SingleCommunityWorkElement>
       <h3>{name}</h3>
       <h4>{role}</h4>
+      <h5>{location}</h5>
+      <h5>Links: </h5>
+      <ul>
+        {links.map((link) => <li><Link href={link.url}><a target="_blank">{link.name}</a></Link></li>)}
+      </ul>
+      <p>{startDate} - {endDate ? endDate : "Present"}</p>
     </SingleCommunityWorkElement>
   );
 };

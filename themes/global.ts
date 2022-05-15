@@ -91,7 +91,6 @@ body::-webkit-scrollbar-thumb {
   background-color: ${({ theme }) => theme.shade5};
   outline: 1px solid ${({ theme }) => theme.shade5};
 }
-
 `;
 
 export default GlobalStyle;

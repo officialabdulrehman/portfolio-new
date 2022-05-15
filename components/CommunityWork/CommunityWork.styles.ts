@@ -23,8 +23,16 @@ export const SingleCommunityWorkElement = styled.a`
     letter-spacing: 0.03rem;
     font-weight: 400;
     color: ${({ theme }: { theme: themeI }) => theme.shade9};
+    // text-align: end;
+  }
+  p {
+    color: ${({ theme }: { theme: themeI }) => theme.shade9};
     text-align: end;
   }
+  &:hover p {
+    color: ${({ theme }: { theme: themeI }) => theme.shade0};
+  }
+  
   &:hover {
     background-color: ${({ theme }: { theme: themeI }) => theme.primary};
     color: ${({ theme }: { theme: themeI }) => theme.shade0};
@@ -34,6 +42,16 @@ export const SingleCommunityWorkElement = styled.a`
   }
   &:hover div div {
     background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
+  }
+  &:hover ul li a {
+    color: ${({ theme }: { theme: themeI }) => theme.shade0};
+  }
+  ul {
+    li{
+      &:hover a {
+        color: ${({ theme }: { theme: themeI }) => theme.shade11};
+      }
+    }
   }
 `;
 

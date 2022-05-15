@@ -17,7 +17,7 @@ const Home: React.FC<HomeProps> = ({ theme, setTheme }) => {
       <Featured />
       <Experience />
       <Education />
-      <Skills />
+      {/* <Skills /> */}
     </MainLayout>
   );
 };

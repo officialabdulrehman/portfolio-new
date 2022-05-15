@@ -9,9 +9,6 @@ import {
   UnderlineElement,
   HireElement,
 } from "./Process.styles";
-import Image from "next/image";
-import showcasePicture from "../../../assets/images/me2.jpg";
-
 interface ProcessProps {}
 
 const Process: React.FC<ProcessProps> = () => {
@@ -19,73 +16,21 @@ const Process: React.FC<ProcessProps> = () => {
     <ProcessElement>
       <ProcessLeftElement>
         <ProcessLeftHeading>
+          <h1>About</h1>
           <UnderlineElement />
-          <h1>I'm Abdul Rehman Nizamani</h1>
         </ProcessLeftHeading>
-        <h4>Fullstack Engineer from Pakistan!</h4>
-        <h4>
-          Keen learner | Focused | Great at problem solving | Efficiency
-          oriented | Always on lookout for new stuff!
-        </h4>
-        <h4>Welcome to my Profile!</h4>
-        <IconsElement>
-          <Link href="https://www.facebook.com/nizthedev">
-            <AnchorIconElement
-              href="https://www.facebook.com/nizthedev"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/icons/facebook.svg" />
-            </AnchorIconElement>
-          </Link>
-          <Link href="https://www.linkedin.com/in/abdul-rehman-nizamani-1066481b9/">
-            <AnchorIconElement
-              href="https://www.linkedin.com/in/abdul-rehman-nizamani-1066481b9/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/icons/linkedin.svg" />
-            </AnchorIconElement>
-          </Link>
-          <Link href="https://twitter.com/nizthedev">
-            <AnchorIconElement
-              href="https://twitter.com/nizthedev"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/icons/twitter.svg" />
-            </AnchorIconElement>
-          </Link>
-          <Link href="https://gitlab.com/officialabdulrehman">
-            <AnchorIconElement
-              href="https://gitlab.com/officialabdulrehman"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/icons/gitlab.svg" />
-            </AnchorIconElement>
-          </Link>
-          <Link href="https://github.com/officialabdulrehman">
-            <AnchorIconElement
-              href="https://github.com/officialabdulrehman"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/icons/github2.svg" />
-            </AnchorIconElement>
-          </Link>
-        </IconsElement>
-        <Link href="/connect">
-          <HireElement>Let's Connect!</HireElement>
-        </Link>
       </ProcessLeftElement>
       <ProcessRightElement>
-        <Image
-          src={showcasePicture}
-          height="480px"
-          width="400px"
-          className="showcaseRight"
-        />
+        <h3>Who am I</h3>
+        <p>A simple guy who loves to create solutions to the real world problems.</p>
+        <p>I started coding when I joined my University for Bechalor's in Computer Science.</p>
+        <p>I learned basics of programming in C, and OOP conecpts in Java. But then soon trasitioned to JavaScript as I was interested in Web development.</p>
+        <br/>
+        <h3>Personality</h3>
+        <p>Introvert | Focused</p>
+        <br/>
+        <h3>Interests</h3>
+        <p>Photography | Cinemetography | Coding | CyberSecurity | Gaming | Anime</p>
       </ProcessRightElement>
     </ProcessElement>
   );

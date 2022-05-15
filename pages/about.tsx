@@ -16,10 +16,10 @@ const About: React.FC<AboutProps> = ({ theme, setTheme }) => {
     <MainLayout pageTitle="About" theme={theme} setTheme={setTheme}>
       <Showcase />
       <Process />
-      <Education />
       <CommunityWorks />
-      <Personality />
-      <Hobbies />
+      <Education />
+      {/* <Personality /> */}
+      {/* <Hobbies /> */}
     </MainLayout>
   );
 };

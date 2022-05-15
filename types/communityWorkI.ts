@@ -1,8 +1,14 @@
 export interface CommunityWorkI {
   name: string;
   role: string;
-  work: string;
-  date: string;
+  location: string;
+  startDate: string;
+  endDate?: string;
   duration: string;
-  links: string[];
+  links: Link[];
+}
+
+export interface Link {
+  name: string
+  url: string
 }

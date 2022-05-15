@@ -113,13 +113,13 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
             Home
           </AnchorElement>
         </Link>
-        <Link href="/projects">
+        {/* <Link href="/projects">
           <AnchorElement
             className={router.pathname == "/projects" ? "activeLink" : ""}
           >
             Projects
           </AnchorElement>
-        </Link>
+        </Link> */}
         <Link href="/about">
           <AnchorElement
             className={router.pathname == "/about" ? "activeLink" : ""}

@@ -18,15 +18,16 @@ const CommunityWorks: React.FC<CommunityWorksProps> = () => {
       <CommunityWorksLeftElement>
         {communityWorks.map(
           (
-            { name, role, work, date, duration, links }: CommunityWorkI,
+            { name, role, location, startDate, endDate, duration, links }: CommunityWorkI,
             index: number
           ) => (
             <CommunityWork
               key={index}
               name={name}
               role={role}
-              work={work}
-              date={date}
+              location={location}
+              startDate={startDate}
+              endDate={endDate}
               duration={duration}
               links={links}
             />

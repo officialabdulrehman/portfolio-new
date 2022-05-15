@@ -11,6 +11,7 @@ import {
 } from "./Showcase.styles";
 import Image from "next/image";
 import showcasePicture from "../../../assets/images/me2.jpg";
+import showcasePicture2 from "../../../assets/images/meDark.jpg";
 
 interface ShowcaseProps {}
 
@@ -23,10 +24,6 @@ const Showcase: React.FC<ShowcaseProps> = () => {
           <h1>I'm Abdul Rehman Nizamani</h1>
         </ShowcaseLeftHeading>
         <h4>Fullstack Engineer from Pakistan!</h4>
-        <h4>
-          Keen learner | Focused | Great at problem solving | Efficiency
-          oriented | Always on lookout for new stuff!
-        </h4>
         <h4>Welcome to my Profile!</h4>
         <IconsElement>
           <Link href="https://www.facebook.com/nizthedev">
@@ -86,7 +83,7 @@ const Showcase: React.FC<ShowcaseProps> = () => {
       </ShowcaseLeftElement>
       <ShowcaseRightElement>
         <Image
-          src={showcasePicture}
+          src={showcasePicture2}
           height="480px"
           width="400px"
           className="showcaseRight"

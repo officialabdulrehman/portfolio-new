@@ -81,7 +81,7 @@ export const AnchorIconElement = styled.a`
   &:hover {
     background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
     /* border-bottom: 1px solid ${({ theme }: { theme: themeI }) =>
-      theme.primary}; */
+    theme.primary}; */
   }
   img {
     height: 37px;
