@@ -84,8 +84,8 @@ const Showcase: React.FC<ShowcaseProps> = () => {
       <ShowcaseRightElement>
         <Image
           src={showcasePicture2}
-          height="480px"
-          width="400px"
+          height="400px"
+          width="320px"
           className="showcaseRight"
         />
       </ShowcaseRightElement>

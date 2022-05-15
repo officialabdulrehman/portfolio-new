@@ -81,7 +81,7 @@ export const AnchorIconElement = styled.a`
   &:hover {
     background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
     /* border-bottom: 1px solid ${({ theme }: { theme: themeI }) =>
-      theme.primary}; */
+    theme.primary}; */
   }
   img {
     height: 37px;
@@ -102,4 +102,7 @@ export const ShowcaseRightElement = styled.div`
   background-position: center;
   box-shadow: 1px 2px 10px #111;
   position: static; */
+  .showcaseRight {
+    border-radius: 0.3rem;
+  }
 `;

@@ -25,9 +25,10 @@ const Process: React.FC<ProcessProps> = () => {
         <p>A simple guy who loves to create solutions to the real world problems.</p>
         <p>I started coding when I joined my University for Bechalor's in Computer Science.</p>
         <p>I learned basics of programming in C, and OOP conecpts in Java. But then soon trasitioned to JavaScript as I was interested in Web development.</p>
+        <p>Have been working full time remotely as a Fullstack Engineer for over a year now.</p>
         <br/>
         <h3>Personality</h3>
-        <p>Introvert | Focused</p>
+        <p>Introvert | Realist | Adaptable | Focused | Rational</p>
         <br/>
         <h3>Interests</h3>
         <p>Photography | Cinemetography | Coding | CyberSecurity | Gaming | Anime</p>

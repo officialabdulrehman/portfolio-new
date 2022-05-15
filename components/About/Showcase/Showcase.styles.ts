@@ -92,8 +92,8 @@ export const AnchorIconElement = styled.a`
 `;
 
 export const ShowcaseRightElement = styled.div`
-  height: 480px;
-  width: 400px;
+  height: 400px;
+  width: 320px;
   /* box-shadow: 0 5px 10px ${({ theme }) => theme.shade5}; */
   /* border-radius: 0.5rem;
   object-fit: cover;
@@ -102,4 +102,7 @@ export const ShowcaseRightElement = styled.div`
   background-position: center;
   box-shadow: 1px 2px 10px #111;
   position: static; */
+  .showcaseRight {
+    border-radius: 0.3rem;
+  }
 `;

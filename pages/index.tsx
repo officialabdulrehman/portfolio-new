@@ -3,6 +3,7 @@ import Experience from "../components/Home/Experiences/Experiences";
 import Featured from "../components/Home/Featured/Featured";
 import Showcase from "../components/Home/Showcase/Showcase";
 import Skills from "../components/Home/Skills/Skills";
+import WIP from "../components/WIP/WIP";
 import MainLayout from "../layouts/MainLayout/MainLayout";
 
 interface HomeProps {
@@ -17,6 +18,7 @@ const Home: React.FC<HomeProps> = ({ theme, setTheme }) => {
       <Featured />
       <Experience />
       <Education />
+      {/* <WIP/> */}
       {/* <Skills /> */}
     </MainLayout>
   );
