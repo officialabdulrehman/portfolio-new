@@ -11,7 +11,7 @@ interface MyAppProps extends AppProps {}
 
 const MyApp: React.FC<MyAppProps> = ({ Component, pageProps, router }) => {
   const [theme, setTheme] = useState("light");
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState(false);
   return (
     <ThemeProvider theme={themes[theme]}>
       <AnimatePresence exitBeforeEnter>
