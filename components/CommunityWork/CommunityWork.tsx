@@ -7,7 +7,10 @@ import {
   CommunityWorkBarInnerElement,
 } from "./CommunityWork.styles";
 
-interface CommunityWorkProps extends CommunityWorkI {}
+interface CommunityWorkProps extends CommunityWorkI {
+  modal: boolean,
+  setModal: (data: boolean) => any; 
+}
 
 const CommunityWork: React.FC<CommunityWorkProps> = ({
   name,
@@ -17,9 +20,11 @@ const CommunityWork: React.FC<CommunityWorkProps> = ({
   endDate,
   duration,
   links,
+  modal, 
+  setModal
 }) => {
   return (
-    <SingleCommunityWorkElement>
+    <SingleCommunityWorkElement onClick={() => setModal(true)}>
       <h3>{name}</h3>
       <h4>{role}</h4>
       <h5>{location}</h5>

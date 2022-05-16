@@ -10,9 +10,12 @@ import { CommunityWorkI } from "../../../types/communityWorkI";
 import CommunityWork from "../../CommunityWork/CommunityWork";
 import { communityWorks } from "../../../data/communityWorks";
 
-interface CommunityWorksProps {}
+interface CommunityWorksProps {
+  modal: boolean,
+  setModal: (data: boolean) => any; 
+}
 
-const CommunityWorks: React.FC<CommunityWorksProps> = () => {
+const CommunityWorks: React.FC<CommunityWorksProps> = ({modal, setModal}) => {
   return (
     <CommunityWorksElement>
       <CommunityWorksLeftElement>
@@ -30,6 +33,8 @@ const CommunityWorks: React.FC<CommunityWorksProps> = () => {
               endDate={endDate}
               duration={duration}
               links={links}
+              modal={modal}
+              setModal={setModal}
             />
           )
         )}

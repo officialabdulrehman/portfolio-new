@@ -9,15 +9,29 @@ import MainLayout from "../layouts/MainLayout/MainLayout";
 interface AboutProps {
   theme: string;
   setTheme: (theme: string) => {};
+  modal: boolean,
+  setModal: (data: boolean) => any; 
 }
 
-const About: React.FC<AboutProps> = ({ theme, setTheme }) => {
+const About: React.FC<AboutProps> = ({ theme, setTheme, modal, setModal }) => {
   return (
-    <MainLayout pageTitle="About" theme={theme} setTheme={setTheme}>
+    <MainLayout 
+      pageTitle="About" 
+      theme={theme} 
+      setTheme={setTheme}
+      modal={modal}
+      setModal={setModal}
+      >
       <Showcase />
       <Process />
-      <CommunityWorks />
-      <Education />
+      <CommunityWorks 
+        modal={modal}
+        setModal={setModal}
+      />
+      <Education 
+        modal={modal}
+        setModal={setModal} 
+        />
       {/* <Personality /> */}
       {/* <Hobbies /> */}
     </MainLayout>

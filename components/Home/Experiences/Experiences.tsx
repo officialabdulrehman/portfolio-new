@@ -9,9 +9,12 @@ import {
   UnderlineElement,
 } from "./Experiences.styles";
 
-interface ExperiencesProps {}
+interface ExperiencesProps {
+  modal: boolean,
+  setModal: (data: boolean) => any; 
+}
 
-const Experiences: React.FC<ExperiencesProps> = () => {
+const Experiences: React.FC<ExperiencesProps> = ({modal, setModal}) => {
   return (
     <ExperiencesElement>
       <ExperiencesLeftElement>
@@ -23,6 +26,8 @@ const Experiences: React.FC<ExperiencesProps> = () => {
               role={role}
               startedAt={startedAt}
               endedAt={endedAt}
+              modal={modal}
+              setModal={setModal}
             >
               <h4>{name}</h4>
               <h5>{role}</h5>

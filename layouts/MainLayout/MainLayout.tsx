@@ -9,6 +9,8 @@ interface LayoutProps {
   description?: string;
   theme: string;
   setTheme: (theme: string) => {};
+  modal: boolean,
+  setModal: (data: boolean) => any; 
 }
 
 const containerVariants = {
