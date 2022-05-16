@@ -18,7 +18,6 @@ const CommunityWork: React.FC<CommunityWorkProps> = ({
   location,
   startDate,
   endDate,
-  duration,
   links,
   modal, 
   setModal
