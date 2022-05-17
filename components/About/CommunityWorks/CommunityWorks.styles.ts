@@ -13,6 +13,13 @@ export const CommunityWorksElement = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  @media screen and (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
 `;
 
 export const CommunityWorksLeftElement = styled.div`
@@ -23,6 +30,9 @@ export const CommunityWorksLeftElement = styled.div`
   align-items: center;
   gap: 2rem;
   padding: 2rem 0;
+  @media screen and (max-width: 450px) {
+    order: 2;
+  }
 `;
 
 export const CommunityWorksRightElement = styled.div`
@@ -32,6 +42,9 @@ export const CommunityWorksRightElement = styled.div`
   justify-content: center;
   align-items: center;
   cursor: default;
+  @media screen and (max-width: 450px) {
+    order: 1;
+  }
 `;
 
 export const UnderlineElement = styled.div`

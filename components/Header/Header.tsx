@@ -106,7 +106,7 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
       animate="visible"
       exit="exit"
     >
-      <Logo />
+      <Logo/>
       <NavElement>
         <Link href="/">
           <AnchorElement className={router.pathname == "/" ? "activeLink" : ""}>

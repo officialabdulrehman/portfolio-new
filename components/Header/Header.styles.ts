@@ -9,10 +9,23 @@ export const HeaderElement = styled.header`
   background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
   /* box-shadow: 0 5px 10px ${({ theme }: { theme: themeI }) =>
     theme.shade5}; */
+    @media screen and (max-width: 450px) {
+      width: 100vw;
+      padding 1rem 0;
+    }
 `;
 
 export const NavElement = styled.nav`
   margin: auto;
+  @media screen and (max-width: 450px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80vw;
+    // padding 1rem 0;
+    width: 70vw;
+  }
 `;
 
 export const AnchorElement = styled.a`
@@ -24,6 +37,10 @@ export const AnchorElement = styled.a`
     background-color: ${({ theme }: { theme: themeI }) => theme.shade2};
   }
   letter-spacing: 0.08rem;
+  @media screen and (max-width: 450px) {
+    padding: 0.5rem 1rem;
+    margin: 0px;
+  }
 `;
 
 export const ThemeIconElement = styled.div`
@@ -37,4 +54,7 @@ export const ThemeIconElement = styled.div`
   /* &:hover {
     background-color: ${({ theme }: { theme: themeI }) => theme.shade2};
   } */
+  @media screen and (max-width: 450px) {
+    width: 20vw;
+  }
 `;

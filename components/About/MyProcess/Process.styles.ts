@@ -13,6 +13,13 @@ export const ProcessElement = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  @media screen and (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
 `;
 
 export const ProcessLeftElement = styled.div`
@@ -27,6 +34,14 @@ width: 50%;
     height: 100%;
     word-wrap: normal;
     max-width: 540px;
+  }
+  @media screen and (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding-bottom: 3rem;
   }
 `;
 
@@ -98,4 +113,12 @@ export const AnchorIconElement = styled.a`
 
 export const ProcessRightElement = styled.div`
   width: 50%;
+  @media screen and (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 0 1rem;
+  }
 `;

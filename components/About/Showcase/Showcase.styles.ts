@@ -13,6 +13,13 @@ export const ShowcaseElement = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  @media screen and (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
 `;
 
 export const ShowcaseLeftElement = styled.div`
@@ -26,6 +33,13 @@ export const ShowcaseLeftElement = styled.div`
     height: 100%;
     word-wrap: normal;
     max-width: 540px;
+  }
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 0 1rem;
   }
 `;
 
@@ -70,6 +84,10 @@ export const IconsElement = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  @media screen and (max-width: 450px) {
+    justify-content: space-evenly;
+  width: 90vw;
+  }
 `;
 
 export const AnchorIconElement = styled.a`
@@ -104,5 +122,15 @@ export const ShowcaseRightElement = styled.div`
   position: static; */
   .showcaseRight {
     border-radius: 0.3rem;
+  }
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // width: 100vw;
+    padding: 1rem 0px 0px 0px;
+    .showcaseRight {
+      border-radius: 0px;
+    }
   }
 `;

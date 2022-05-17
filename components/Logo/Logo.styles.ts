@@ -5,6 +5,9 @@ export const LogoElement = styled.div`
   cursor: pointer;
   margin-top: auto;
   margin-bottom: auto;
+  @media screen and (max-width: 450px) {
+    display: none;
+  }
 `;
 
 export const SpanElement = styled.span`

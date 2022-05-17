@@ -2,9 +2,8 @@ import styled from "styled-components";
 import { themeI } from "../../themes/themeI";
 
 const genRandomColor = () => {
-  const color: any = `hsl(${360 * Math.random()}, ${
-    15 + 70 * Math.random()
-  }%, ${60 + 10 * Math.random()}%)`;
+  const color: any = `hsl(${360 * Math.random()}, ${15 + 70 * Math.random()
+    }%, ${60 + 10 * Math.random()}%)`;
 
   return color;
 };
@@ -51,8 +50,8 @@ export const SingleFeaturedElement = styled.a`
   h5 {
     letter-spacing: 0.03rem;
     color: ${() => {
-      return color;
-    }};
+    return color;
+  }};
   }
   p {
     color: ${({ theme }: { theme: themeI }) => theme.shade8};

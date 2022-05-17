@@ -13,6 +13,13 @@ export const ConnectElement = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  @media screen and (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
 `;
 
 export const ConnectLeftElement = styled.div`
@@ -38,6 +45,13 @@ export const ConnectLeftElement = styled.div`
     align-items: center;
     justify-content: center;
   }
+  @media screen and (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
 `;
 
 export const IconsContainer = styled.div`
@@ -46,6 +60,22 @@ export const IconsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 450px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90vw;
+    .icons{
+    }
+    a{
+      width: 0px;
+      padding: 0px;
+      margin-right: 2rem;
+      &:click {
+        padding: 0;
+      }
+    }
+  }
 `;
 
 export const ConnectRightElement = styled.div`
@@ -56,6 +86,13 @@ export const ConnectRightElement = styled.div`
   align-items: center;
   gap: 2rem;
   padding: 2rem 0;
+  @media screen and (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
 `;
 
 export const UnderlineElement = styled.div`

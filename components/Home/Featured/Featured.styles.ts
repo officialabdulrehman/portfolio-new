@@ -13,6 +13,12 @@ export const FeaturedElement = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
 `;
 
 export const FeaturedLeftElement = styled.div`
@@ -22,6 +28,12 @@ export const FeaturedLeftElement = styled.div`
   justify-content: center;
   align-items: center;
   cursor: default;
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
 `;
 
 export const FeaturedRightElement = styled.div`
@@ -32,6 +44,12 @@ export const FeaturedRightElement = styled.div`
   align-items: center;
   gap: 2rem;
   padding: 2rem 0;
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
 `;
 
 export const UnderlineElement = styled.div`

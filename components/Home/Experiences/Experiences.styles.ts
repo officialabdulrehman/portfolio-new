@@ -13,6 +13,12 @@ export const ExperiencesElement = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
 `;
 
 export const ExperiencesLeftElement = styled.div`
@@ -23,6 +29,13 @@ export const ExperiencesLeftElement = styled.div`
   align-items: center;
   gap: 2rem;
   padding: 2rem 0;
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    order: 2;
+  }
 `;
 
 export const ExperiencesRightElement = styled.div`
@@ -32,6 +45,13 @@ export const ExperiencesRightElement = styled.div`
   justify-content: center;
   align-items: center;
   cursor: default;
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    order: 1;
+  }
 `;
 
 export const UnderlineElement = styled.div`
