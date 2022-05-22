@@ -37,7 +37,7 @@ const ConnectComponent: React.FC<ConnectProps> = () => {
       return;
     }
     try {
-      const response = await axios.post(String(process.env["EMAIL_URL"]), {
+      const response = await axios.post(String(process.env.NEXT_PUBLIC_EMAIL_URL), {
         name,
         email,
         phone,
@@ -50,6 +50,7 @@ const ConnectComponent: React.FC<ConnectProps> = () => {
     } catch (e) {
       console.log(e);
       alert("Failure");
+      setLoader(false);
     }
     setName("");
     setEmail("");
