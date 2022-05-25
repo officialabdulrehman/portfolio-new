@@ -1,5 +1,6 @@
 import { featured } from "../../../data/featured";
 import { FeaturedI } from "../../../types/featuredI";
+import FeaturedModal from "../../modals/FeaturedModal/FeaturedModal";
 import SingleFeatured from "../../SingleFeatured/SingleFeatured";
 import {
   FeaturedElement,
