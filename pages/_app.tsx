@@ -3,7 +3,7 @@ import { AppProps } from "next/app";
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import Header from "../components/Header/Header";
-import WIP from "../components/WIP/WIP";
+import WIP from "../components/modals/WIP/WIP";
 import GlobalStyle from "../themes/global";
 import { themes } from "../themes/main";
 

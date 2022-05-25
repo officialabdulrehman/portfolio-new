@@ -3,7 +3,7 @@ import {
   WIPImageContainerElement
 } from "./WIP.styles";
 import Image from "next/image";
-import WIPPicture from "../../assets/icons/WIP.png";
+import WIPPicture from "../../../assets/icons/WIP.png";
 import { motion } from "framer-motion";
 interface WIPProps {
   modal: boolean,

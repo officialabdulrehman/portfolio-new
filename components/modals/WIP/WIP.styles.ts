@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { themeI } from "../../themes/themeI";
 
 
 export const WIPElement = styled.div`
