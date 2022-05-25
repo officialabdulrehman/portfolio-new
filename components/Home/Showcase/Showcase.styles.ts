@@ -67,7 +67,6 @@ export const HireElement = styled.a`
   }
   padding: 1rem 2rem;
   letter-spacing: 0.1rem;
-  /* width: 70px; */
   border-radius: 0.3rem;
   cursor: pointer;
 `;
@@ -93,17 +92,13 @@ export const IconsElement = styled.div`
 export const AnchorIconElement = styled.a`
   color: ${({ theme }: { theme: themeI }) => theme.shade11};
   padding: 1rem 1.2rem;
-  /* margin: 0rem 1rem; */
 
   cursor: pointer;
   &:hover {
     background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
-    /* border-bottom: 1px solid ${({ theme }: { theme: themeI }) =>
-    theme.primary}; */
   }
   img {
     height: 37px;
-    /* margin-right: 12px; */
     width: 37px;
     margin-top: 5px;
   }
@@ -112,14 +107,6 @@ export const AnchorIconElement = styled.a`
 export const ShowcaseRightElement = styled.div`
   height: 480px;
   width: 400px;
-  /* box-shadow: 0 5px 10px ${({ theme }) => theme.shade5}; */
-  /* border-radius: 0.5rem;
-  object-fit: cover;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 1px 2px 10px #111;
-  position: static; */
   .showcaseRight {
     border-radius: 0.3rem;
   }

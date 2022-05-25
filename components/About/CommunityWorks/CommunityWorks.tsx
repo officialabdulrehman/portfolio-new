@@ -1,11 +1,9 @@
-import Link from "next/link";
 import {
   CommunityWorksElement,
   CommunityWorksLeftElement,
   CommunityWorksRightElement,
   UnderlineElement,
 } from "./CommunityWorks.styles";
-import Image from "next/image";
 import { CommunityWorkI } from "../../../types/communityWorkI";
 import CommunityWork from "../../CommunityWork/CommunityWork";
 import { communityWorks } from "../../../data/communityWorks";

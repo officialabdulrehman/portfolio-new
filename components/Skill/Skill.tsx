@@ -1,4 +1,3 @@
-// import { themeI } from "../../../themes/themeI";
 import { SkillI } from "../../types/skillI";
 import {
   SingleSkillElement,

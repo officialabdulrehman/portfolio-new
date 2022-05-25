@@ -7,10 +7,6 @@ const genRandomColor = () => {
 
   return color;
 };
-// const color: any = `hsl(${360 * Math.random()}, ${15 + 70 * Math.random()}%, ${
-//   60 + 10 * Math.random()
-// }%)`;
-
 const color = genRandomColor;
 
 export const SingleFeaturedElement = styled.a`

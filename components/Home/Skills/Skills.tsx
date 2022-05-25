@@ -1,4 +1,3 @@
-// import { themeI } from "../../../themes/themeI";
 import { skills } from "../../../data/skills";
 import { SkillI } from "../../../types/skillI";
 import Skill from "../../Skill/Skill";

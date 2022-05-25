@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-// import DarkIcon from "../icons/DarkIcon/DarkIcon";
-// import LightIcon from "../icons/LightIcon/LightIcon";
 import moon from "../../assets/icons/moon.png";
 import Logo from "../Logo/Logo";
 import {
@@ -21,13 +19,9 @@ interface HeaderProps {
 const containerVariants = {
   hidden: {
     opacity: 0,
-    // x: "-50vw",
-    // y: "-50vh",
   },
   visible: {
     opacity: 1,
-    // x: 0,
-    // y: 0,
     transition: {
       duration: 1,
       ease: "anticipate",
@@ -36,8 +30,6 @@ const containerVariants = {
     },
   },
   exit: {
-    // x: "50vw",
-    // y: "50vh",
     opacity: 0,
     transition: {
       ease: "anticipate",

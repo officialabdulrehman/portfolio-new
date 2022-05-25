@@ -3,8 +3,6 @@ import Link from "next/link";
 import { CommunityWorkI } from "../../types/communityWorkI";
 import {
   SingleCommunityWorkElement,
-  CommunityWorkBarElement,
-  CommunityWorkBarInnerElement,
 } from "./CommunityWork.styles";
 
 interface CommunityWorkProps extends CommunityWorkI {

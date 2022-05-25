@@ -173,7 +173,6 @@ export const FormElement = styled.form`
     }
     padding: 1rem 2rem;
     letter-spacing: 0.1rem;
-    /* width: 70px; */
     border: none;
     border-radius: 0.3rem;
     cursor: pointer;

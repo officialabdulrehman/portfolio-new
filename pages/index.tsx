@@ -2,8 +2,6 @@ import Education from "../components/Home/Education/Education";
 import Experience from "../components/Home/Experiences/Experiences";
 import Featured from "../components/Home/Featured/Featured";
 import Showcase from "../components/Home/Showcase/Showcase";
-import Skills from "../components/Home/Skills/Skills";
-import WIP from "../components/WIP/WIP";
 import MainLayout from "../layouts/MainLayout/MainLayout";
 
 interface HomeProps {
@@ -26,8 +24,6 @@ const Home: React.FC<HomeProps> = ({ theme, setTheme, modal, setModal }) => {
       <Featured modal={modal} setModal={setModal}/>
       <Experience modal={modal} setModal={setModal} />
       <Education modal={modal} setModal={setModal}/>
-      {/* <WIP/> */}
-      {/* <Skills /> */}
     </MainLayout>
   );
 };

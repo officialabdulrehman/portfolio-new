@@ -13,7 +13,7 @@ import Image from "next/image";
 import showcasePicture from "../../../assets/images/me2.jpg";
 
 interface ShowcaseProps {}
-
+//TODO: make links dynamic
 const Showcase: React.FC<ShowcaseProps> = () => {
   return (
     <ShowcaseElement>

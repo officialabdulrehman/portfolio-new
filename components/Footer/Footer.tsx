@@ -2,7 +2,7 @@ import React from "react";
 import FooterElement from "./Footer.styles";
 
 interface FooterProps {}
-
+// TODO make mail dynamic
 const Footer: React.FC<FooterProps> = () => {
   return (
     <FooterElement>

@@ -7,12 +7,11 @@ export const HeaderElement = styled.header`
   justify-content: space-between;
   padding: 1rem 2rem;
   background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
-  /* box-shadow: 0 5px 10px ${({ theme }: { theme: themeI }) =>
-    theme.shade5}; */
-    @media screen and (max-width: 450px) {
-      width: 100vw;
-      padding 1rem 0;
-    }
+
+  @media screen and (max-width: 450px) {
+    width: 100vw;
+    padding 1rem 0;
+  }
 `;
 
 export const NavElement = styled.nav`
@@ -51,9 +50,7 @@ export const ThemeIconElement = styled.div`
   height: 30px;
   border-radius: 50%;
   cursor: pointer;
-  /* &:hover {
-    background-color: ${({ theme }: { theme: themeI }) => theme.shade2};
-  } */
+
   @media screen and (max-width: 450px) {
     width: 20vw;
   }

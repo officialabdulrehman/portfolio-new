@@ -1,5 +1,3 @@
-import axios from "axios";
-import { useState } from "react";
 import ConnectComponent from "../components/Connect/Experiences/Connect";
 import MainLayout from "../layouts/MainLayout/MainLayout";
 

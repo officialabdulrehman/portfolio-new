@@ -6,7 +6,6 @@ export const SingleExperienceElement = styled.a`
   padding: 1rem;
   width: fit-content;
   min-width: 350px;
-  /* box-shadow: 0 5px 20px ${({ theme }) => theme.shade1}; */
   cursor: pointer;
   background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
   &:hover {

@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { themeI } from "../../themes/themeI";
 
 const FooterElement = styled.div`
-  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   text-align: center;
