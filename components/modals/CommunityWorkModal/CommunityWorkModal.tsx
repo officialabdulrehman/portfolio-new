@@ -1,10 +1,13 @@
-import { WIPElement, WIPImageContainerElement } from "./WIP.styles";
+import {
+  CommunityWorkModalElement,
+  CommunityWorkModalImageContainerElement,
+} from "./CommunityWorkModal.styles";
 import Image from "next/image";
-import WIPPicture from "../../../assets/icons/WIP.png";
+import CommunityWorkModalPicture from "../../../assets/icons/WIP.png";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
-import { HIDE_WIP_MODAL } from "../../../redux/reduxTypes";
-interface WIPProps {}
+import { HIDE_COMMUNITYWORK_MODAL } from "../../../redux/reduxTypes";
+interface CommunityWorkModalProps {}
 
 const containerVariants = {
   hidden: {
@@ -26,27 +29,27 @@ const containerVariants = {
   },
 };
 
-const WIP: React.FC<WIPProps> = ({}) => {
+const CommunityWorkModal: React.FC<CommunityWorkModalProps> = ({}) => {
   const dispatch = useDispatch();
   return (
-    <WIPElement
+    <CommunityWorkModalElement
       as={motion.div}
-      onClick={() => dispatch({ type: HIDE_WIP_MODAL })}
+      onClick={() => dispatch({ type: HIDE_COMMUNITYWORK_MODAL })}
       variants={containerVariants}
       initial="hidden"
       animate="visible"
       exit="exit"
     >
-      <WIPImageContainerElement>
+      <CommunityWorkModalImageContainerElement>
         <Image
-          src={WIPPicture}
+          src={CommunityWorkModalPicture}
           height="128px"
           width="128px"
           className="showcaseRight"
         />
-      </WIPImageContainerElement>
-    </WIPElement>
+      </CommunityWorkModalImageContainerElement>
+    </CommunityWorkModalElement>
   );
 };
 
-export default WIP;
+export default CommunityWorkModal;

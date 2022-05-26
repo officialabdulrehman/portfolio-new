@@ -1,10 +1,13 @@
-import { WIPElement, WIPImageContainerElement } from "./WIP.styles";
+import {
+  EducationModalElement,
+  EducationModalImageContainerElement,
+} from "./EducationModal.styles";
 import Image from "next/image";
-import WIPPicture from "../../../assets/icons/WIP.png";
+import EducationModalPicture from "../../../assets/icons/WIP.png";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
-import { HIDE_WIP_MODAL } from "../../../redux/reduxTypes";
-interface WIPProps {}
+import { HIDE_EDUCATION_MODAL } from "../../../redux/reduxTypes";
+interface EducationModalProps {}
 
 const containerVariants = {
   hidden: {
@@ -26,27 +29,27 @@ const containerVariants = {
   },
 };
 
-const WIP: React.FC<WIPProps> = ({}) => {
+const EducationModal: React.FC<EducationModalProps> = ({}) => {
   const dispatch = useDispatch();
   return (
-    <WIPElement
+    <EducationModalElement
       as={motion.div}
-      onClick={() => dispatch({ type: HIDE_WIP_MODAL })}
+      onClick={() => dispatch({ type: HIDE_EDUCATION_MODAL })}
       variants={containerVariants}
       initial="hidden"
       animate="visible"
       exit="exit"
     >
-      <WIPImageContainerElement>
+      <EducationModalImageContainerElement>
         <Image
-          src={WIPPicture}
+          src={EducationModalPicture}
           height="128px"
           width="128px"
           className="showcaseRight"
         />
-      </WIPImageContainerElement>
-    </WIPElement>
+      </EducationModalImageContainerElement>
+    </EducationModalElement>
   );
 };
 
-export default WIP;
+export default EducationModal;

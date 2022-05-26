@@ -1,14 +1,13 @@
 import {
   FeaturedModalElement,
-  FeaturedModalImageContainerElement
+  FeaturedModalImageContainerElement,
 } from "./FeaturedModal.styles";
 import Image from "next/image";
-import FeaturedModalPicture from "../../../assets/icons/moon.png";
+import FeaturedModalPicture from "../../../assets/icons/WIP.png";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { HIDE_FEATURED_MODAL } from "../../../redux/reduxTypes";
-interface FeaturedModalProps {
-}
+interface FeaturedModalProps {}
 
 const containerVariants = {
   hidden: {
@@ -31,15 +30,16 @@ const containerVariants = {
 };
 
 const FeaturedModal: React.FC<FeaturedModalProps> = ({}) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   return (
-    <FeaturedModalElement 
-    as={motion.div}
-    onClick={() => dispatch({type: HIDE_FEATURED_MODAL})} 
-    variants={containerVariants}
-    initial="hidden"
-    animate="visible"
-    exit="exit">
+    <FeaturedModalElement
+      as={motion.div}
+      onClick={() => dispatch({ type: HIDE_FEATURED_MODAL })}
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <FeaturedModalImageContainerElement>
         <Image
           src={FeaturedModalPicture}

@@ -10,6 +10,9 @@ import { themes } from "../themes/main";
 import { Provider, useSelector } from "react-redux";
 import { GlobalStateI } from "../redux/reduxTypes";
 import { store } from "../redux/store";
+import ExperienceModal from "../components/modals/ExperienceModal/ExperienceModal";
+import EducationModal from "../components/modals/EducationModal/EducationModal";
+import CommunityWorkModal from "../components/modals/CommunityWorkModal/CommunityWorkModal";
 
 interface MyAppProps extends AppProps {}
 
@@ -28,29 +31,34 @@ const MyApp: React.FC<MyAppProps> = ({ Component, pageProps, router }) => {
 export default MyApp;
 
 const ReduxWrapper = ({ Component, pageProps, router }: MyAppProps) => {
-  const [theme, setTheme] = useState("light");
-  const [modal, setModal] = useState(false);
+  const wipModal = useSelector((state: GlobalStateI) => state.wipModal);
+  const theme = useSelector((state: GlobalStateI) => state.theme);
   const featuredModal = useSelector(
     (state: GlobalStateI) => state.featuredModal
+  );
+  const experienceModal = useSelector(
+    (state: GlobalStateI) => state.experienceModal
+  );
+  const educationModal = useSelector(
+    (state: GlobalStateI) => state.educationModal
+  );
+  const communityWorkModal = useSelector(
+    (state: GlobalStateI) => state.communityWorkModal
   );
   return (
     <ThemeProvider theme={themes[theme]}>
       <AnimatePresence exitBeforeEnter>
-        {modal ? <WIP modal={modal} setModal={setModal} /> : ""}
+        {wipModal ? <WIP /> : ""}
         {featuredModal ? <FeaturedModal /> : ""}
+        {experienceModal ? <ExperienceModal /> : ""}
+        {educationModal ? <EducationModal /> : ""}
+        {communityWorkModal ? <CommunityWorkModal /> : ""}
       </AnimatePresence>
       <AnimatePresence exitBeforeEnter>
-        <Header theme={theme} setTheme={setTheme} />
+        <Header />
       </AnimatePresence>
       <AnimatePresence exitBeforeEnter>
-        <Component
-          {...pageProps}
-          theme={theme}
-          setTheme={setTheme}
-          key={router.route}
-          modal={modal}
-          setModal={setModal}
-        />
+        <Component {...pageProps} key={router.route} />
       </AnimatePresence>
       <GlobalStyle />
     </ThemeProvider>

@@ -8,18 +8,23 @@ import { CommunityWorkI } from "../../../types/communityWorkI";
 import CommunityWork from "../../CommunityWork/CommunityWork";
 import { communityWorks } from "../../../data/communityWorks";
 
-interface CommunityWorksProps {
-  modal: boolean,
-  setModal: (data: boolean) => any; 
-}
+interface CommunityWorksProps {}
 
-const CommunityWorks: React.FC<CommunityWorksProps> = ({modal, setModal}) => {
+const CommunityWorks: React.FC<CommunityWorksProps> = () => {
   return (
     <CommunityWorksElement>
       <CommunityWorksLeftElement>
         {communityWorks.map(
           (
-            { name, role, location, startDate, endDate, duration, links }: CommunityWorkI,
+            {
+              name,
+              role,
+              location,
+              startDate,
+              endDate,
+              duration,
+              links,
+            }: CommunityWorkI,
             index: number
           ) => (
             <CommunityWork
@@ -31,8 +36,6 @@ const CommunityWorks: React.FC<CommunityWorksProps> = ({modal, setModal}) => {
               endDate={endDate}
               duration={duration}
               links={links}
-              modal={modal}
-              setModal={setModal}
             />
           )
         )}

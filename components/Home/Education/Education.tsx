@@ -8,12 +8,9 @@ import {
   UnderlineElement,
 } from "./Education.styles";
 
-interface EducationProps {
-  modal: boolean,
-  setModal: (data: boolean) => any; 
-}
+interface EducationProps {}
 
-const Education: React.FC<EducationProps> = ({modal, setModal}) => {
+const Education: React.FC<EducationProps> = () => {
   return (
     <EducationElement>
       <EducationLeftElement>
@@ -29,8 +26,6 @@ const Education: React.FC<EducationProps> = ({modal, setModal}) => {
               level={level}
               city={city}
               country={country}
-              modal={modal}
-              setModal={setModal}
             />
           )
         )}

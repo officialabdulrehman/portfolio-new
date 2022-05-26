@@ -1,22 +1,11 @@
 import ConnectComponent from "../components/Connect/Experiences/Connect";
 import MainLayout from "../layouts/MainLayout/MainLayout";
 
-interface ConnectProps {
-  theme: string;
-  setTheme: (theme: string) => {};
-  modal: boolean,
-  setModal: (data: boolean) => any; 
-}
+interface ConnectProps {}
 
-const Connect: React.FC<ConnectProps> = ({ theme, setTheme, modal, setModal }) => {
+const Connect: React.FC<ConnectProps> = () => {
   return (
-    <MainLayout 
-      pageTitle="Connect" 
-      theme={theme} 
-      setTheme={setTheme}
-      modal={modal}
-      setModal={setModal}
-      >
+    <MainLayout pageTitle="Connect">
       <ConnectComponent />
     </MainLayout>
   );

@@ -11,11 +11,10 @@ import {
 } from "./Header.styles";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import { useDispatch, useSelector } from "react-redux";
+import { GlobalStateI, SWITCH_THEME } from "../../redux/reduxTypes";
 
-interface HeaderProps {
-  theme: string;
-  setTheme: any;
-}
+interface HeaderProps {}
 const containerVariants = {
   hidden: {
     opacity: 0,
@@ -63,7 +62,9 @@ const themeIconAnimations = {
   },
 };
 
-const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
+const Header: React.FC<HeaderProps> = () => {
+  const dispatch = useDispatch();
+  const theme = useSelector((state: GlobalStateI) => state.theme);
   const [scrolled, setScrolled] = useState(false);
   const router = useRouter();
   let headerClasses = [];
@@ -98,7 +99,7 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
       animate="visible"
       exit="exit"
     >
-      <Logo/>
+      <Logo />
       <NavElement>
         <Link href="/">
           <AnchorElement className={router.pathname == "/" ? "activeLink" : ""}>
@@ -128,7 +129,12 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
         </Link>
       </NavElement>
       <ThemeIconElement
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        onClickCapture={() =>
+          dispatch({
+            type: SWITCH_THEME,
+            payload: theme,
+          })
+        }
         style={{
           position: "relative",
         }}

@@ -4,32 +4,15 @@ import Showcase from "../components/About/Showcase/Showcase";
 import Education from "../components/Home/Education/Education";
 import MainLayout from "../layouts/MainLayout/MainLayout";
 
-interface AboutProps {
-  theme: string;
-  setTheme: (theme: string) => {};
-  modal: boolean,
-  setModal: (data: boolean) => any; 
-}
+interface AboutProps {}
 
-const About: React.FC<AboutProps> = ({ theme, setTheme, modal, setModal }) => {
+const About: React.FC<AboutProps> = () => {
   return (
-    <MainLayout 
-      pageTitle="About" 
-      theme={theme} 
-      setTheme={setTheme}
-      modal={modal}
-      setModal={setModal}
-      >
+    <MainLayout pageTitle="About">
       <Showcase />
       <Process />
-      <CommunityWorks 
-        modal={modal}
-        setModal={setModal}
-      />
-      <Education 
-        modal={modal}
-        setModal={setModal} 
-        />
+      <CommunityWorks />
+      <Education />
     </MainLayout>
   );
 };

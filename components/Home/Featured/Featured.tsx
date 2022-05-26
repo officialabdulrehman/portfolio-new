@@ -9,12 +9,9 @@ import {
   UnderlineElement,
 } from "./Featured.styles";
 
-interface FeaturedProps {
-  modal: boolean,
-  setModal: (data: boolean) => any; 
-}
+interface FeaturedProps {}
 
-const Featured: React.FC<FeaturedProps> = ({modal, setModal}) => {
+const Featured: React.FC<FeaturedProps> = () => {
   return (
     <FeaturedElement>
       <FeaturedLeftElement>
@@ -35,8 +32,6 @@ const Featured: React.FC<FeaturedProps> = ({modal, setModal}) => {
               company={company}
               startedAt={startedAt}
               endedAt={endedAt}
-              modal={modal}
-              setModal={setModal}
             />
           )
         )}

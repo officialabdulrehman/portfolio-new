@@ -1,13 +1,10 @@
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 
-interface ProjectsProps {
-  theme: string;
-  setTheme: (theme: string) => {};
-}
+interface ProjectsProps {}
 
-const Projects: React.FC<ProjectsProps> = ({ theme, setTheme }) => {
+const Projects: React.FC<ProjectsProps> = () => {
   return (
-    <MainLayout pageTitle="Projects" theme={theme} setTheme={setTheme}>
+    <MainLayout pageTitle="Projects">
       <h1>Projects</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,

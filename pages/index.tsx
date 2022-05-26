@@ -4,26 +4,15 @@ import Featured from "../components/Home/Featured/Featured";
 import Showcase from "../components/Home/Showcase/Showcase";
 import MainLayout from "../layouts/MainLayout/MainLayout";
 
-interface HomeProps {
-  theme: string;
-  setTheme: (theme: string) => {};
-  modal: boolean,
-  setModal: (data: boolean) => any; 
-}
+interface HomeProps {}
 
-const Home: React.FC<HomeProps> = ({ theme, setTheme, modal, setModal }) => {
+const Home: React.FC<HomeProps> = () => {
   return (
-    <MainLayout 
-      pageTitle="Home" 
-      theme={theme} 
-      setTheme={setTheme} 
-      modal={modal}
-      setModal={setModal}
-      >
+    <MainLayout pageTitle="Home">
       <Showcase />
-      <Featured modal={modal} setModal={setModal}/>
-      <Experience modal={modal} setModal={setModal} />
-      <Education modal={modal} setModal={setModal}/>
+      <Featured />
+      <Experience />
+      <Education />
     </MainLayout>
   );
 };

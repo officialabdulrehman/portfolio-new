@@ -1,10 +1,13 @@
-import { WIPElement, WIPImageContainerElement } from "./WIP.styles";
+import {
+  ExperienceModalElement,
+  ExperienceModalImageContainerElement,
+} from "./ExperienceModal.styles";
 import Image from "next/image";
-import WIPPicture from "../../../assets/icons/WIP.png";
+import ExperienceModalPicture from "../../../assets/icons/WIP.png";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
-import { HIDE_WIP_MODAL } from "../../../redux/reduxTypes";
-interface WIPProps {}
+import { HIDE_EXPERIENCE_MODAL } from "../../../redux/reduxTypes";
+interface ExperienceModalProps {}
 
 const containerVariants = {
   hidden: {
@@ -26,27 +29,27 @@ const containerVariants = {
   },
 };
 
-const WIP: React.FC<WIPProps> = ({}) => {
+const ExperienceModal: React.FC<ExperienceModalProps> = ({}) => {
   const dispatch = useDispatch();
   return (
-    <WIPElement
+    <ExperienceModalElement
       as={motion.div}
-      onClick={() => dispatch({ type: HIDE_WIP_MODAL })}
+      onClick={() => dispatch({ type: HIDE_EXPERIENCE_MODAL })}
       variants={containerVariants}
       initial="hidden"
       animate="visible"
       exit="exit"
     >
-      <WIPImageContainerElement>
+      <ExperienceModalImageContainerElement>
         <Image
-          src={WIPPicture}
+          src={ExperienceModalPicture}
           height="128px"
           width="128px"
           className="showcaseRight"
         />
-      </WIPImageContainerElement>
-    </WIPElement>
+      </ExperienceModalImageContainerElement>
+    </ExperienceModalElement>
   );
 };
 
-export default WIP;
+export default ExperienceModal;

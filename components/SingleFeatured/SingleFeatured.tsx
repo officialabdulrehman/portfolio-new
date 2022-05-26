@@ -4,18 +4,15 @@ import { FeaturedI } from "../../types/featuredI";
 import { DateDiff, extractDate } from "../../util/common";
 import { SingleFeaturedElement } from "./SingleFeatured.styles";
 
-interface SingleFeaturedProps extends FeaturedI {
-  modal: boolean,
-  setModal: (data: boolean) => any; 
-}
+interface SingleFeaturedProps extends FeaturedI {}
 
 const SingleFeatured: React.FC<SingleFeaturedProps> = (props) => {
-  const featuredModal = useSelector((state: GlobalStateI) => state.featuredModal)
-  const dispatch = useDispatch()
-
-  const { name, role, category, company, startedAt, endedAt, modal, setModal } = props;
+  const dispatch = useDispatch();
+  const { name, role, category, company, startedAt, endedAt } = props;
   return (
-    <SingleFeaturedElement onClick={() => dispatch({type: SHOW_FEATURED_MODAL})}>
+    <SingleFeaturedElement
+      onClick={() => dispatch({ type: SHOW_FEATURED_MODAL })}
+    >
       <h3>{name}</h3>
       <h4>{role}</h4>
       {/* <h4>{company}</h4> */}

@@ -7,10 +7,6 @@ import { motion } from "framer-motion";
 interface LayoutProps {
   pageTitle: string;
   description?: string;
-  theme: string;
-  setTheme: (theme: string) => {};
-  modal: boolean,
-  setModal: (data: boolean) => any; 
 }
 
 const containerVariants = {
