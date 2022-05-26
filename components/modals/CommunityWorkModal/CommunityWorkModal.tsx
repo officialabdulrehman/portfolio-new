@@ -7,27 +7,8 @@ import CommunityWorkModalPicture from "../../../assets/icons/WIP.png";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { HIDE_COMMUNITYWORK_MODAL } from "../../../redux/reduxTypes";
+import { communityModalVariants } from "../../../animations/global";
 interface CommunityWorkModalProps {}
-
-const containerVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.4,
-      ease: "easeIn",
-    },
-  },
-  exit: {
-    opacity: 0,
-    transition: {
-      ease: "easeOut",
-      duration: 0.5,
-    },
-  },
-};
 
 const CommunityWorkModal: React.FC<CommunityWorkModalProps> = ({}) => {
   const dispatch = useDispatch();
@@ -35,7 +16,7 @@ const CommunityWorkModal: React.FC<CommunityWorkModalProps> = ({}) => {
     <CommunityWorkModalElement
       as={motion.div}
       onClick={() => dispatch({ type: HIDE_COMMUNITYWORK_MODAL })}
-      variants={containerVariants}
+      variants={communityModalVariants}
       initial="hidden"
       animate="visible"
       exit="exit"

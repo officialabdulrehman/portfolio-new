@@ -7,27 +7,8 @@ import FeaturedModalPicture from "../../../assets/icons/WIP.png";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { HIDE_FEATURED_MODAL } from "../../../redux/reduxTypes";
+import { featureModalVariants } from "../../../animations/global";
 interface FeaturedModalProps {}
-
-const containerVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.4,
-      ease: "easeIn",
-    },
-  },
-  exit: {
-    opacity: 0,
-    transition: {
-      ease: "easeOut",
-      duration: 0.5,
-    },
-  },
-};
 
 const FeaturedModal: React.FC<FeaturedModalProps> = ({}) => {
   const dispatch = useDispatch();
@@ -35,7 +16,7 @@ const FeaturedModal: React.FC<FeaturedModalProps> = ({}) => {
     <FeaturedModalElement
       as={motion.div}
       onClick={() => dispatch({ type: HIDE_FEATURED_MODAL })}
-      variants={containerVariants}
+      variants={featureModalVariants}
       initial="hidden"
       animate="visible"
       exit="exit"

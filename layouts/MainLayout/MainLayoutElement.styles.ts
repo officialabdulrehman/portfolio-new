@@ -5,9 +5,6 @@ const MainLayoutElement = styled.main`
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
-
-  .container {
-  }
 `;
 
 export default MainLayoutElement;

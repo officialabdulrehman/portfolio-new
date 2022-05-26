@@ -3,37 +3,12 @@ import Head from "next/head";
 import Footer from "../../components/Footer/Footer";
 import MainLayoutElement from "./MainLayoutElement.styles";
 import { motion } from "framer-motion";
+import { mainLayoutVariants } from "../../animations/global";
 
 interface LayoutProps {
   pageTitle: string;
   description?: string;
 }
-
-const containerVariants = {
-  hidden: {
-    opacity: 0,
-    y: "50vh",
-    scale: 1,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-      ease: "anticipate",
-      when: "beforeChildren",
-      staggerChildren: 0.5,
-    },
-  },
-  exit: {
-    y: "-50vh",
-    opacity: 0,
-    transition: {
-      ease: "anticipate",
-      duration: 1,
-    },
-  },
-};
 
 const MainLayout: React.FC<LayoutProps> = ({
   pageTitle,
@@ -53,9 +28,9 @@ const MainLayout: React.FC<LayoutProps> = ({
 
         <title>NizTheDev | {pageTitle}</title>
       </Head>
-      <MainLayoutElement className="container">
+      <MainLayoutElement>
         <motion.div
-          variants={containerVariants}
+          variants={mainLayoutVariants}
           initial="hidden"
           animate="visible"
           exit="exit"

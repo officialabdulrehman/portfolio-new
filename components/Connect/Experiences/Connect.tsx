@@ -1,10 +1,7 @@
 import axios from "axios";
 import Link from "next/link";
 import { useState } from "react";
-import {
-  AnchorIconElement,
-  IconsElement,
-} from "../../Home/Showcase/Showcase.styles";
+import { AnchorIconElement } from "../../Home/Showcase/Showcase.styles";
 import {
   ConnectElement,
   ConnectLeftElement,
@@ -37,12 +34,15 @@ const ConnectComponent: React.FC<ConnectProps> = () => {
       return;
     }
     try {
-      const response = await axios.post(String(process.env.NEXT_PUBLIC_EMAIL_URL), {
-        name,
-        email,
-        phone,
-        message,
-      });
+      const response = await axios.post(
+        String(process.env.NEXT_PUBLIC_EMAIL_URL),
+        {
+          name,
+          email,
+          phone,
+          message,
+        }
+      );
       console.log(response);
       setLoader(false);
 

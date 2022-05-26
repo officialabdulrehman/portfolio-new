@@ -13,54 +13,9 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { GlobalStateI, SWITCH_THEME } from "../../redux/reduxTypes";
+import { headerVariants, themeIconAnimations } from "../../animations/global";
 
 interface HeaderProps {}
-const containerVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-      ease: "anticipate",
-      when: "beforeChildren",
-      staggerChildren: 0.5,
-    },
-  },
-  exit: {
-    opacity: 0,
-    transition: {
-      ease: "anticipate",
-      duration: 1,
-    },
-  },
-};
-
-const themeIconAnimations = {
-  hidden: {
-    opacity: 0,
-    rotateY: 0,
-    y: "-25px",
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "anticipate",
-    },
-  },
-  exit: {
-    y: "25px",
-    rotateY: 0,
-    opacity: 0,
-    transition: {
-      ease: "anticipate",
-      duration: 0.5,
-    },
-  },
-};
 
 const Header: React.FC<HeaderProps> = () => {
   const dispatch = useDispatch();
@@ -94,7 +49,7 @@ const Header: React.FC<HeaderProps> = () => {
     <HeaderElement
       className={headerClasses.join(" ")}
       as={motion.header}
-      variants={containerVariants}
+      variants={headerVariants}
       initial="hidden"
       animate="visible"
       exit="exit"

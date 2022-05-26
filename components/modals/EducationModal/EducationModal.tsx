@@ -7,27 +7,8 @@ import EducationModalPicture from "../../../assets/icons/WIP.png";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { HIDE_EDUCATION_MODAL } from "../../../redux/reduxTypes";
+import { educationModalVariants } from "../../../animations/global";
 interface EducationModalProps {}
-
-const containerVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.4,
-      ease: "easeIn",
-    },
-  },
-  exit: {
-    opacity: 0,
-    transition: {
-      ease: "easeOut",
-      duration: 0.5,
-    },
-  },
-};
 
 const EducationModal: React.FC<EducationModalProps> = ({}) => {
   const dispatch = useDispatch();
@@ -35,7 +16,7 @@ const EducationModal: React.FC<EducationModalProps> = ({}) => {
     <EducationModalElement
       as={motion.div}
       onClick={() => dispatch({ type: HIDE_EDUCATION_MODAL })}
-      variants={containerVariants}
+      variants={educationModalVariants}
       initial="hidden"
       animate="visible"
       exit="exit"
