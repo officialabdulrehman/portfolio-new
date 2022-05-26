@@ -5,10 +5,9 @@ import {
 import Image from "next/image";
 import FeaturedModalPicture from "../../../assets/icons/moon.png";
 import { motion } from "framer-motion";
+import { useDispatch } from "react-redux";
+import { HIDE_FEATURED_MODAL } from "../../../redux/reduxTypes";
 interface FeaturedModalProps {
-  featured: boolean,
-  setFeatured: (data: boolean) => any; // function declaration
-  // doSomething(data: object): boolean; // method declaration
 }
 
 const containerVariants = {
@@ -31,11 +30,12 @@ const containerVariants = {
   },
 };
 
-const FeaturedModal: React.FC<FeaturedModalProps> = ({featured, setFeatured}) => {
+const FeaturedModal: React.FC<FeaturedModalProps> = ({}) => {
+  const dispatch = useDispatch()
   return (
     <FeaturedModalElement 
     as={motion.div}
-    onClick={() => setFeatured(false)} 
+    onClick={() => dispatch({type: HIDE_FEATURED_MODAL})} 
     variants={containerVariants}
     initial="hidden"
     animate="visible"

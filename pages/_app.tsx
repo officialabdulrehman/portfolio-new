@@ -7,19 +7,38 @@ import FeaturedModal from "../components/modals/FeaturedModal/FeaturedModal";
 import WIP from "../components/modals/WIP/WIP";
 import GlobalStyle from "../themes/global";
 import { themes } from "../themes/main";
+import { Provider, useSelector } from "react-redux";
+import { GlobalStateI } from "../redux/reduxTypes";
+import { store } from "../redux/store";
 
 interface MyAppProps extends AppProps {}
 
 const MyApp: React.FC<MyAppProps> = ({ Component, pageProps, router }) => {
+  return (
+    <Provider store={store}>
+      <ReduxWrapper
+        Component={Component}
+        pageProps={pageProps}
+        router={router}
+      />
+    </Provider>
+  );
+};
+
+export default MyApp;
+
+const ReduxWrapper = ({ Component, pageProps, router }: MyAppProps) => {
   const [theme, setTheme] = useState("light");
   const [modal, setModal] = useState(false);
-  const [featured, setFeatured] = useState(true);
+  const featuredModal = useSelector(
+    (state: GlobalStateI) => state.featuredModal
+  );
   return (
     <ThemeProvider theme={themes[theme]}>
       <AnimatePresence exitBeforeEnter>
-      {modal ? <WIP modal={modal} setModal={setModal}/> : ""}
-      {/* {featured ? <FeaturedModal featured={featured} setFeatured={setFeatured}/> : ""} */}
-      </AnimatePresence>      
+        {modal ? <WIP modal={modal} setModal={setModal} /> : ""}
+        {featuredModal ? <FeaturedModal /> : ""}
+      </AnimatePresence>
       <AnimatePresence exitBeforeEnter>
         <Header theme={theme} setTheme={setTheme} />
       </AnimatePresence>
@@ -29,7 +48,7 @@ const MyApp: React.FC<MyAppProps> = ({ Component, pageProps, router }) => {
           theme={theme}
           setTheme={setTheme}
           key={router.route}
-          modal={modal} 
+          modal={modal}
           setModal={setModal}
         />
       </AnimatePresence>
@@ -37,5 +56,3 @@ const MyApp: React.FC<MyAppProps> = ({ Component, pageProps, router }) => {
     </ThemeProvider>
   );
 };
-
-export default MyApp;

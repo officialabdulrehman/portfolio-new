@@ -59,3 +59,10 @@ export const DateDiff = {
     return `${years} year${years > 1 ? "s" : ""}`;
   },
 };
+
+export const updateObject = (oldObject: any, updatedProperties: any) => {
+  return {
+    ...oldObject,
+    ...updatedProperties,
+  };
+};
