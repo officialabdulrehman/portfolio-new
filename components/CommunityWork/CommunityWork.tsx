@@ -18,8 +18,8 @@ const CommunityWork: React.FC<CommunityWorkProps> = (props) => {
       <h5>{location}</h5>
       <h5>Links: </h5>
       <ul>
-        {links.map((link) => (
-          <li>
+        {links.map((link, index) => (
+          <li key={index}>
             <Link href={link.url}>
               <a target="_blank">{link.name}</a>
             </Link>

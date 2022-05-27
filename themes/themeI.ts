@@ -21,4 +21,5 @@ export interface themeI {
   secondary: string
   secondaryLight: string
   secondaryDark: string
+  genRandomColor: () => {}
 }

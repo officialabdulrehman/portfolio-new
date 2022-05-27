@@ -1,24 +1,15 @@
 import styled from "styled-components";
 import { themeI } from "../../themes/themeI";
 
-const genRandomColor = () => {
-  const color: any = `hsl(${360 * Math.random()}, ${15 + 70 * Math.random()
-    }%, ${60 + 10 * Math.random()}%)`;
-
-  return color;
-};
-const color = genRandomColor;
-
-export const SingleFeaturedElement = styled.a`
+export const SingleFeaturedElement = styled.div`
   border-radius: 0.3rem;
   padding: 1rem;
   width: fit-content;
   min-width: 350px;
-  /* box-shadow: 0 5px 20px ${({ theme }) => theme.shade1}; */
   cursor: pointer;
   background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
   &:hover {
-    background: ${() => color};
+    background: ${({ theme }: { theme: themeI }) => theme.genRandomColor()};
     color: ${({ theme }: { theme: themeI }) => theme.shade0};
   }
   &:hover h3 {
@@ -45,9 +36,7 @@ export const SingleFeaturedElement = styled.a`
   }
   h5 {
     letter-spacing: 0.03rem;
-    color: ${() => {
-    return color;
-  }};
+    color: ${({ theme }: { theme: themeI }) => theme.genRandomColor()};
   }
   p {
     color: ${({ theme }: { theme: themeI }) => theme.shade8};

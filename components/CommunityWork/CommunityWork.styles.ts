@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { themeI } from "../../themes/themeI";
 
-export const SingleCommunityWorkElement = styled.a`
+export const SingleCommunityWorkElement = styled.div`
   border-radius: 0.3rem;
   padding: 1rem;
   width: fit-content;

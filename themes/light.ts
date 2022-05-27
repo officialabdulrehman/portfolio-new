@@ -23,4 +23,10 @@ export const light: themeI = {
   secondary: '#ff7961',
   secondaryLight: '#ff7961',
   secondaryDark: '#ef5350',
+  genRandomColor: () => {
+    const color: any = `hsl(${360 * Math.random()}, ${15 + 70 * Math.random()
+      }%, ${60 + 10 * Math.random()}%)`;
+
+    return color;
+  }
 }
