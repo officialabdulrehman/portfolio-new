@@ -1,4 +1,6 @@
-export const mainLayoutVariants = {
+import { Variants } from "framer-motion";
+
+export const mainLayoutVariants: Variants = {
   hidden: {
     opacity: 0,
     y: "50vh",
@@ -24,7 +26,7 @@ export const mainLayoutVariants = {
   },
 };
 
-export const headerVariants = {
+export const headerVariants: Variants = {
   hidden: {
     opacity: 0,
   },
@@ -46,7 +48,7 @@ export const headerVariants = {
   },
 };
 
-export const themeIconAnimations = {
+export const themeIconAnimations: Variants = {
   hidden: {
     opacity: 0,
     rotateY: 0,
@@ -71,7 +73,7 @@ export const themeIconAnimations = {
   },
 };
 
-export const communityModalVariants = {
+export const communityModalVariants: Variants = {
   hidden: {
     opacity: 0,
   },
@@ -91,7 +93,7 @@ export const communityModalVariants = {
   },
 };
 
-export const educationModalVariants = {
+export const educationModalVariants: Variants = {
   hidden: {
     opacity: 0,
   },
@@ -111,7 +113,7 @@ export const educationModalVariants = {
   },
 };
 
-export const experienceModalVariants = {
+export const experienceModalVariants: Variants = {
   hidden: {
     opacity: 0,
   },
@@ -131,7 +133,7 @@ export const experienceModalVariants = {
   },
 };
 
-export const featureModalVariants = {
+export const featureModalVariants: Variants = {
   hidden: {
     opacity: 0,
   },
@@ -151,7 +153,7 @@ export const featureModalVariants = {
   },
 };
 
-export const wipModalVariants = {
+export const wipModalVariants: Variants = {
   hidden: {
     opacity: 0,
   },

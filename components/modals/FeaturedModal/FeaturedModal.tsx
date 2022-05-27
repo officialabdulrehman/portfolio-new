@@ -1,26 +1,14 @@
-import {
-  FeaturedModalElement,
-  FeaturedModalImageContainerElement,
-} from "./FeaturedModal.styles";
+import { FeaturedModalImageContainerElement } from "./FeaturedModal.styles";
 import Image from "next/image";
 import FeaturedModalPicture from "../../../assets/icons/WIP.png";
-import { motion } from "framer-motion";
-import { useDispatch } from "react-redux";
 import { HIDE_FEATURED_MODAL } from "../../../redux/reduxTypes";
 import { featureModalVariants } from "../../../animations/global";
+import ModalWrapper from "../../../layouts/ModalWrapper/ModalWrapper";
 interface FeaturedModalProps {}
 
 const FeaturedModal: React.FC<FeaturedModalProps> = ({}) => {
-  const dispatch = useDispatch();
   return (
-    <FeaturedModalElement
-      as={motion.div}
-      onClick={() => dispatch({ type: HIDE_FEATURED_MODAL })}
-      variants={featureModalVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-    >
+    <ModalWrapper type={HIDE_FEATURED_MODAL} variants={featureModalVariants}>
       <FeaturedModalImageContainerElement>
         <Image
           src={FeaturedModalPicture}
@@ -29,7 +17,7 @@ const FeaturedModal: React.FC<FeaturedModalProps> = ({}) => {
           className="showcaseRight"
         />
       </FeaturedModalImageContainerElement>
-    </FeaturedModalElement>
+    </ModalWrapper>
   );
 };
 

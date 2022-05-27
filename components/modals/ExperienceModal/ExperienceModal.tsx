@@ -1,25 +1,17 @@
-import {
-  ExperienceModalElement,
-  ExperienceModalImageContainerElement,
-} from "./ExperienceModal.styles";
+import { ExperienceModalImageContainerElement } from "./ExperienceModal.styles";
 import Image from "next/image";
 import ExperienceModalPicture from "../../../assets/icons/WIP.png";
-import { motion } from "framer-motion";
-import { useDispatch } from "react-redux";
 import { HIDE_EXPERIENCE_MODAL } from "../../../redux/reduxTypes";
 import { experienceModalVariants } from "../../../animations/global";
+import ModalWrapper from "../../../layouts/ModalWrapper/ModalWrapper";
+
 interface ExperienceModalProps {}
 
 const ExperienceModal: React.FC<ExperienceModalProps> = ({}) => {
-  const dispatch = useDispatch();
   return (
-    <ExperienceModalElement
-      as={motion.div}
-      onClick={() => dispatch({ type: HIDE_EXPERIENCE_MODAL })}
+    <ModalWrapper
+      type={HIDE_EXPERIENCE_MODAL}
       variants={experienceModalVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
     >
       <ExperienceModalImageContainerElement>
         <Image
@@ -29,7 +21,7 @@ const ExperienceModal: React.FC<ExperienceModalProps> = ({}) => {
           className="showcaseRight"
         />
       </ExperienceModalImageContainerElement>
-    </ExperienceModalElement>
+    </ModalWrapper>
   );
 };
 

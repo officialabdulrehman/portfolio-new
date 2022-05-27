@@ -1,26 +1,15 @@
-import {
-  EducationModalElement,
-  EducationModalImageContainerElement,
-} from "./EducationModal.styles";
+import { EducationModalImageContainerElement } from "./EducationModal.styles";
 import Image from "next/image";
 import EducationModalPicture from "../../../assets/icons/WIP.png";
-import { motion } from "framer-motion";
-import { useDispatch } from "react-redux";
 import { HIDE_EDUCATION_MODAL } from "../../../redux/reduxTypes";
 import { educationModalVariants } from "../../../animations/global";
+import ModalWrapper from "../../../layouts/ModalWrapper/ModalWrapper";
+
 interface EducationModalProps {}
 
 const EducationModal: React.FC<EducationModalProps> = ({}) => {
-  const dispatch = useDispatch();
   return (
-    <EducationModalElement
-      as={motion.div}
-      onClick={() => dispatch({ type: HIDE_EDUCATION_MODAL })}
-      variants={educationModalVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-    >
+    <ModalWrapper type={HIDE_EDUCATION_MODAL} variants={educationModalVariants}>
       <EducationModalImageContainerElement>
         <Image
           src={EducationModalPicture}
@@ -29,7 +18,7 @@ const EducationModal: React.FC<EducationModalProps> = ({}) => {
           className="showcaseRight"
         />
       </EducationModalImageContainerElement>
-    </EducationModalElement>
+    </ModalWrapper>
   );
 };
 

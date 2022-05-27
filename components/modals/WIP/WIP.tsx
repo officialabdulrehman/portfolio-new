@@ -1,24 +1,15 @@
-import { WIPElement, WIPImageContainerElement } from "./WIP.styles";
+import { WIPImageContainerElement } from "./WIP.styles";
 import Image from "next/image";
 import WIPPicture from "../../../assets/icons/WIP.png";
-import { motion } from "framer-motion";
-import { useDispatch } from "react-redux";
 import { HIDE_WIP_MODAL } from "../../../redux/reduxTypes";
 import { wipModalVariants } from "../../../animations/global";
+import ModalWrapper from "../../../layouts/ModalWrapper/ModalWrapper";
 
 interface WIPProps {}
 
 const WIP: React.FC<WIPProps> = ({}) => {
-  const dispatch = useDispatch();
   return (
-    <WIPElement
-      as={motion.div}
-      onClick={() => dispatch({ type: HIDE_WIP_MODAL })}
-      variants={wipModalVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-    >
+    <ModalWrapper type={HIDE_WIP_MODAL} variants={wipModalVariants}>
       <WIPImageContainerElement>
         <Image
           src={WIPPicture}
@@ -27,7 +18,7 @@ const WIP: React.FC<WIPProps> = ({}) => {
           className="showcaseRight"
         />
       </WIPImageContainerElement>
-    </WIPElement>
+    </ModalWrapper>
   );
 };
 
