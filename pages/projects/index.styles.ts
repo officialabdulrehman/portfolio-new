@@ -29,3 +29,5 @@ export const ProjectsElement = styled.div`
   flex-wrap: wrap;
   padding: 3rem 0;
 `
+
+export default ProjectsPageElement
