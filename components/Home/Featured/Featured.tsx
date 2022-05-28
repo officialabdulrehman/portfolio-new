@@ -21,19 +21,29 @@ const Featured: React.FC<FeaturedProps> = () => {
       <FeaturedRightElement>
         {featured.map(
           (
-            { name, role, category, company, startedAt, endedAt }: FeaturedI,
+            {
+              name,
+              role,
+              category,
+              company,
+              startedAt,
+              endedAt,
+              featured,
+            }: FeaturedI,
             index: number
-          ) => (
-            <SingleFeatured
-              key={index}
-              name={name}
-              role={role}
-              category={category}
-              company={company}
-              startedAt={startedAt}
-              endedAt={endedAt}
-            />
-          )
+          ) =>
+            featured && (
+              <SingleFeatured
+                key={index}
+                name={name}
+                role={role}
+                category={category}
+                company={company}
+                startedAt={startedAt}
+                endedAt={endedAt}
+                featured={featured}
+              />
+            )
         )}
       </FeaturedRightElement>
     </FeaturedElement>

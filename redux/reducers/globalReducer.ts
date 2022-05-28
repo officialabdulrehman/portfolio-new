@@ -11,6 +11,8 @@ import {
   SHOW_COMMUNITYWORK_MODAL,
   HIDE_COMMUNITYWORK_MODAL,
   SWITCH_THEME,
+  SHOW_PROJECT_MODAL,
+  HIDE_PROJECT_MODAL,
 } from "../reduxTypes";
 import { updateObject } from "../../util/common";
 
@@ -21,6 +23,7 @@ const initialState: GlobalStateI = {
   educationModal: false,
   experienceModal: false,
   communityWorkModal: false,
+  projectModal: false
 };
 
 export const reducer = (state = initialState, action: any) => {
@@ -36,6 +39,8 @@ export const reducer = (state = initialState, action: any) => {
     case HIDE_EXPERIENCE_MODAL: return hideExprienceModal(state, action)
     case SHOW_COMMUNITYWORK_MODAL: return showCommunityWorkModal(state, action)
     case HIDE_COMMUNITYWORK_MODAL: return hideCommunityWorkModal(state, action)
+    case SHOW_PROJECT_MODAL: return showProjectModal(state, action)
+    case HIDE_PROJECT_MODAL: return hideProjectModal(state, action)
     default: return state
   }
 }
@@ -86,4 +91,12 @@ const showCommunityWorkModal = (state: GlobalStateI, action: any): GlobalStateI 
 
 const hideCommunityWorkModal = (state: GlobalStateI, action: any): GlobalStateI => {
   return updateObject(state, { communityWorkModal: false })
+}
+
+const showProjectModal = (state: GlobalStateI, action: any): GlobalStateI => {
+  return updateObject(state, { projectModal: true })
+}
+
+const hideProjectModal = (state: GlobalStateI, action: any): GlobalStateI => {
+  return updateObject(state, { projectModal: false })
 }

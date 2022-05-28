@@ -1,6 +1,5 @@
 import { AnimatePresence } from "framer-motion";
 import { AppProps } from "next/app";
-import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import Header from "../components/Header/Header";
 import FeaturedModal from "../components/modals/FeaturedModal/FeaturedModal";
@@ -13,6 +12,7 @@ import { store } from "../redux/store";
 import ExperienceModal from "../components/modals/ExperienceModal/ExperienceModal";
 import EducationModal from "../components/modals/EducationModal/EducationModal";
 import CommunityWorkModal from "../components/modals/CommunityWorkModal/CommunityWorkModal";
+import ProjectModal from "../components/modals/ProjectModal/ProjectModal";
 
 interface MyAppProps extends AppProps {}
 
@@ -45,6 +45,7 @@ const ReduxWrapper = ({ Component, pageProps, router }: MyAppProps) => {
   const communityWorkModal = useSelector(
     (state: GlobalStateI) => state.communityWorkModal
   );
+  const projectModal = useSelector((state: GlobalStateI) => state.projectModal);
   return (
     <ThemeProvider theme={themes[theme]}>
       <AnimatePresence exitBeforeEnter>
@@ -53,6 +54,7 @@ const ReduxWrapper = ({ Component, pageProps, router }: MyAppProps) => {
         {experienceModal ? <ExperienceModal /> : ""}
         {educationModal ? <EducationModal /> : ""}
         {communityWorkModal ? <CommunityWorkModal /> : ""}
+        {projectModal ? <ProjectModal /> : ""}
       </AnimatePresence>
       <AnimatePresence exitBeforeEnter>
         <Header />

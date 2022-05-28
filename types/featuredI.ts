@@ -5,4 +5,6 @@ export interface FeaturedI {
   company: string;
   startedAt: Date;
   endedAt?: Date;
+  featured: boolean;
+  image?: string;
 }

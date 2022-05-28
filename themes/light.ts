@@ -24,7 +24,7 @@ export const light: themeI = {
   secondaryLight: '#ff7961',
   secondaryDark: '#ef5350',
   genRandomColor: () => {
-    const color: any = `hsl(${360 * Math.random()}, ${15 + 70 * Math.random()
+    const color: string = `hsl(${360 * Math.random()}, ${15 + 70 * Math.random()
       }%, ${60 + 10 * Math.random()}%)`;
 
     return color;

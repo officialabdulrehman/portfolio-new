@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = () => {
 
   const handleScroll = () => {
     const offset = window.scrollY;
-    if (offset > 150) {
+    if (offset > 250) {
       setScrolled(true);
     } else {
       setScrolled(false);
@@ -61,13 +61,13 @@ const Header: React.FC<HeaderProps> = () => {
             Home
           </AnchorElement>
         </Link>
-        {/* <Link href="/projects">
+        <Link href="/projects">
           <AnchorElement
             className={router.pathname == "/projects" ? "activeLink" : ""}
           >
             Projects
           </AnchorElement>
-        </Link> */}
+        </Link>
         <Link href="/about">
           <AnchorElement
             className={router.pathname == "/about" ? "activeLink" : ""}

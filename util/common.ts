@@ -66,3 +66,24 @@ export const updateObject = (oldObject: any, updatedProperties: any) => {
     ...updatedProperties,
   };
 };
+
+export const genRandomColor = () => {
+  const color: any = `hsl(${360 * Math.random()}, ${15 + 70 * Math.random()
+    }%, ${60 + 10 * Math.random()}%)`;
+
+  return color;
+}
+
+export const generateRandomInteger = (min: number, max: number): number => {
+  return Math.floor(min + Math.random() * (max - min + 1))
+}
+
+const randomColors: string[] = [];
+
+for (let i = 0; i < 257; i++) {
+  randomColors.push(genRandomColor())
+}
+
+export const getRandomColor = () => {
+  return randomColors[generateRandomInteger(1, 256)]
+}
