@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Project from "../../components/Project/Project";
-import { featured } from "../../data/featured";
+import { companies, featured as featuredData } from "../../data/featured";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
+import { GlobalStateI, SET_PROJECTS } from "../../redux/reduxTypes";
 import { FeaturedI } from "../../types/featuredI";
 import {
   FiltersElement,
@@ -12,17 +14,43 @@ import {
 interface ProjectsProps {}
 
 export const Projects: React.FC<ProjectsProps> = () => {
+  const projects = useSelector((state: GlobalStateI) => state.projects);
+  const [companyFilter, setCompanyFilter] = useState("All");
+  const dispatch = useDispatch();
   useEffect(() => {
     alert(
       "This section of portfolio is underconstruction, but you may still view it"
     );
   }, []);
+  useEffect(() => {
+    let projects = [];
+    if (companyFilter == "All") {
+      projects = featuredData;
+    } else {
+      projects = featuredData.filter(
+        (featured) => featured.company === companyFilter
+      );
+    }
+    dispatch({
+      type: SET_PROJECTS,
+      payload: projects,
+    });
+  }, [companyFilter]);
   return (
     <MainLayout pageTitle="Projects">
       <ProjectsPageElement>
-        <FiltersElement>Filters</FiltersElement>
+        <FiltersElement>
+          Filters
+          <ul>
+            {companies.map((company: string) => {
+              return (
+                <li onClick={() => setCompanyFilter(company)}>{company}</li>
+              );
+            })}
+          </ul>
+        </FiltersElement>
         <ProjectsElement>
-          {featured.map(
+          {projects.map(
             (
               {
                 name,

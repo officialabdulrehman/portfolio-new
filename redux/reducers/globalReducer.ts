@@ -13,8 +13,10 @@ import {
   SWITCH_THEME,
   SHOW_PROJECT_MODAL,
   HIDE_PROJECT_MODAL,
+  SET_PROJECTS,
 } from "../reduxTypes";
 import { updateObject } from "../../util/common";
+import { featured } from "../../data/featured";
 
 const initialState: GlobalStateI = {
   theme: 'light',
@@ -23,7 +25,8 @@ const initialState: GlobalStateI = {
   educationModal: false,
   experienceModal: false,
   communityWorkModal: false,
-  projectModal: false
+  projectModal: false,
+  projects: featured
 };
 
 export const reducer = (state = initialState, action: any) => {
@@ -41,6 +44,7 @@ export const reducer = (state = initialState, action: any) => {
     case HIDE_COMMUNITYWORK_MODAL: return hideCommunityWorkModal(state, action)
     case SHOW_PROJECT_MODAL: return showProjectModal(state, action)
     case HIDE_PROJECT_MODAL: return hideProjectModal(state, action)
+    case SET_PROJECTS: return setProjects(state, action)
     default: return state
   }
 }
@@ -99,4 +103,9 @@ const showProjectModal = (state: GlobalStateI, action: any): GlobalStateI => {
 
 const hideProjectModal = (state: GlobalStateI, action: any): GlobalStateI => {
   return updateObject(state, { projectModal: false })
+}
+
+const setProjects = (state: GlobalStateI, action: any): GlobalStateI => {
+  console.log("action", action)
+  return updateObject(state, { projects: action.payload })
 }

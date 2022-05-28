@@ -1,3 +1,5 @@
+import { FeaturedI } from "../types/featuredI"
+
 // GlobalState interface
 export interface GlobalStateI {
   theme: string
@@ -7,6 +9,7 @@ export interface GlobalStateI {
   experienceModal: boolean
   communityWorkModal: boolean
   projectModal: boolean
+  projects: FeaturedI[]
 }
 
 // User reducer types
@@ -23,3 +26,4 @@ export const SHOW_COMMUNITYWORK_MODAL = 'SHOW_COMMUNITYWORK_MODAL';
 export const HIDE_COMMUNITYWORK_MODAL = 'HIDE_COMMUNITYWORK_MODAL';
 export const SHOW_PROJECT_MODAL = 'SHOW_PROJECT_MODAL';
 export const HIDE_PROJECT_MODAL = 'HIDE_PROJECT_MODAL';
+export const SET_PROJECTS = "SET_PROJECTS"

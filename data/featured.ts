@@ -25,7 +25,7 @@ export const featured: FeaturedI[] = [
     name: "Socialize",
     role: "Sole FullStack Engineer",
     category: "Social",
-    company: "University of Sindh ( FYP )",
+    company: "University of Sindh",
     startedAt: new Date("10-01-2020"),
     endedAt: new Date("03-01-2021"),
     featured: true,
@@ -50,3 +50,5 @@ export const featured: FeaturedI[] = [
     featured: false
   },
 ];
+
+export const companies = ["Centrox AI", "University of Sindh", "Personal", "All"]
