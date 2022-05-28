@@ -11,7 +11,7 @@ import {
 
 interface ProjectsProps {}
 
-const Projects: React.FC<ProjectsProps> = () => {
+export const Projects: React.FC<ProjectsProps> = () => {
   useEffect(() => {
     alert(
       "This section of portfolio is underconstruction, but you may still view it"
