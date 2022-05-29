@@ -172,3 +172,23 @@ export const wipModalVariants: Variants = {
     },
   },
 };
+
+export const projectVariants: Variants = {
+  hidden: {
+    y: "-100vh",
+  },
+  visible: {
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: "easeIn",
+    },
+  },
+  exit: {
+    y: "100vh",
+    transition: {
+      ease: "easeOut",
+      duration: 0.5,
+    },
+  },
+};

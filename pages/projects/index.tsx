@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Project from "../../components/Project/Project";
@@ -23,6 +24,7 @@ export const Projects: React.FC<ProjectsProps> = () => {
     );
   }, []);
   useEffect(() => {
+    console.log("RERENDER");
     let projects = [];
     if (companyFilter == "All") {
       projects = featuredData;
@@ -50,31 +52,33 @@ export const Projects: React.FC<ProjectsProps> = () => {
           </ul>
         </FiltersElement>
         <ProjectsElement>
-          {projects.map(
-            (
-              {
-                name,
-                role,
-                category,
-                company,
-                startedAt,
-                endedAt,
-                featured,
-              }: FeaturedI,
-              index: number
-            ) => (
-              <Project
-                key={index}
-                name={name}
-                role={role}
-                category={category}
-                company={company}
-                startedAt={startedAt}
-                endedAt={endedAt}
-                featured={featured}
-              />
-            )
-          )}
+          <AnimatePresence exitBeforeEnter>
+            {projects.map(
+              (
+                {
+                  name,
+                  role,
+                  category,
+                  company,
+                  startedAt,
+                  endedAt,
+                  featured,
+                }: FeaturedI,
+                index: number
+              ) => (
+                <Project
+                  key={name}
+                  name={name}
+                  role={role}
+                  category={category}
+                  company={company}
+                  startedAt={startedAt}
+                  endedAt={endedAt}
+                  featured={featured}
+                />
+              )
+            )}
+          </AnimatePresence>
         </ProjectsElement>
       </ProjectsPageElement>
     </MainLayout>
