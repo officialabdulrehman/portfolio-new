@@ -7,8 +7,8 @@ export const SingleEducationElement = styled.a`
   min-width: 350px;
   cursor: pointer;
   background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
-  transition: 0.3s;
   &:hover {
+    transition: 0.3s;
     background-color: ${({ theme }: { theme: themeI }) => theme.primary};
     color: ${({ theme }: { theme: themeI }) => theme.shade0};
   }

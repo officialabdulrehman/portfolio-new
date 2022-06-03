@@ -8,8 +8,8 @@ export const SingleFeaturedElement = styled.a`
   min-width: 350px;
   cursor: pointer;
   background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
-  transition: 0.3s;
   &:hover {
+    transition: 0.3s;
     background: ${({ theme }: { theme: themeI }) => theme.genRandomColor()};
     color: ${({ theme }: { theme: themeI }) => theme.shade0};
   }

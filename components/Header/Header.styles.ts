@@ -32,8 +32,8 @@ export const AnchorElement = styled.a`
   padding: 1rem;
   margin: 0rem 1rem;
   cursor: pointer;
-  transition: 0.3s;
   &:hover {
+    transition: 0.3s;
     background-color: ${({ theme }: { theme: themeI }) => theme.shade2};
   }
   letter-spacing: 0.08rem;

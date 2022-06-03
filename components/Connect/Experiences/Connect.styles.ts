@@ -61,7 +61,9 @@ export const IconsContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   a{
-    transition: 0.3s;
+    &:hover{
+      transition: 0.3s;
+    }
   }
   @media screen and (max-width: 450px) {
     display: flex;
@@ -74,7 +76,9 @@ export const IconsContainer = styled.div`
       width: 0px;
       padding: 0px;
       margin-right: 2rem;
-      transition: 0.3s;
+      &:hover{
+        transition: 0.3s;
+      }
       &::after {
         padding: 0;
       }
@@ -125,9 +129,9 @@ export const FormElement = styled.form`
     padding: 0 1rem;
     background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
     color: ${({ theme }: { theme: themeI }) => theme.shade10};
-    transition: 0.3s;
     &:hover,
     &:focus {
+      transition: 0.3s;
       border: 1px solid ${({ theme }: { theme: themeI }) => theme.primary};
     }
     &:hover {
@@ -150,9 +154,9 @@ export const FormElement = styled.form`
     color: ${({ theme }: { theme: themeI }) => theme.shade10};
     resize: none;
     border: 1px solid ${({ theme }: { theme: themeI }) => theme.shade1};
-    transition: 0.3s;
     &:hover,
     &:focus {
+      transition: 0.3s;
       border: 1px solid ${({ theme }: { theme: themeI }) => theme.primary};
     }
     &:hover {
@@ -174,6 +178,7 @@ export const FormElement = styled.form`
     color: ${({ theme }: { theme: themeI }) => theme.shade11};
     background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
     &:hover {
+      transition: 0.3s;
       background-color: ${({ theme }: { theme: themeI }) => theme.primary};
       color: ${({ theme }: { theme: themeI }) => theme.shade0};
     }
@@ -182,6 +187,5 @@ export const FormElement = styled.form`
     border: none;
     border-radius: 0.3rem;
     cursor: pointer;
-    transition: 0.3s;
   }
 `;
