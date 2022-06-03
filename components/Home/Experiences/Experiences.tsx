@@ -1,7 +1,7 @@
 import { experiences } from "../../../data/experiences";
 import { ExperienceI } from "../../../types/experienceI";
 import { DateDiff, extractDate } from "../../../util/common";
-import SingleExperience from "../../SingleExperience/SingleExperience";
+import { SingleExperience } from "../../SingleExperience/SingleExperience";
 import {
   ExperiencesElement,
   ExperiencesLeftElement,
@@ -16,13 +16,17 @@ const Experiences: React.FC<ExperiencesProps> = () => {
     <ExperiencesElement>
       <ExperiencesLeftElement>
         {experiences.map(
-          ({ name, role, startedAt, endedAt }: ExperienceI, index: number) => (
+          (
+            { name, role, startedAt, endedAt, url }: ExperienceI,
+            index: number
+          ) => (
             <SingleExperience
               key={index}
               name={name}
               role={role}
               startedAt={startedAt}
               endedAt={endedAt}
+              url={url}
             >
               <h4>{name}</h4>
               <h5>{role}</h5>

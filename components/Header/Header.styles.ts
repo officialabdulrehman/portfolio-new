@@ -10,7 +10,7 @@ export const HeaderElement = styled.header`
 
   @media screen and (max-width: 450px) {
     width: 100vw;
-    padding 1rem 0;
+    padding: 1rem 0;
   }
 `;
 
@@ -32,6 +32,7 @@ export const AnchorElement = styled.a`
   padding: 1rem;
   margin: 0rem 1rem;
   cursor: pointer;
+  transition: 0.3s;
   &:hover {
     background-color: ${({ theme }: { theme: themeI }) => theme.shade2};
   }

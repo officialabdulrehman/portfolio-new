@@ -3,4 +3,5 @@ export interface EducationI {
   level: string;
   city: string;
   country: string;
+  url?: string;
 }

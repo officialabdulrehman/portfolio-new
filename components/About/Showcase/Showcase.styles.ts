@@ -61,6 +61,7 @@ export const HireElement = styled.a`
   align-items: center;
   cursor: pointer;
   background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
+  transition: 0.3s;
   &:hover {
     background-color: ${({ theme }: { theme: themeI }) => theme.primary};
     color: ${({ theme }: { theme: themeI }) => theme.shade0};
@@ -93,6 +94,7 @@ export const IconsElement = styled.div`
 export const AnchorIconElement = styled.a`
   color: ${({ theme }: { theme: themeI }) => theme.shade11};
   padding: 1rem 1.2rem;
+  transition: 0.3s;
   /* margin: 0rem 1rem; */
 
   cursor: pointer;

@@ -1,6 +1,5 @@
 import { featured } from "../../../data/featured";
 import { FeaturedI } from "../../../types/featuredI";
-import FeaturedModal from "../../modals/FeaturedModal/FeaturedModal";
 import SingleFeatured from "../../SingleFeatured/SingleFeatured";
 import {
   FeaturedElement,
@@ -29,6 +28,7 @@ const Featured: React.FC<FeaturedProps> = () => {
               startedAt,
               endedAt,
               featured,
+              url,
             }: FeaturedI,
             index: number
           ) =>
@@ -42,6 +42,7 @@ const Featured: React.FC<FeaturedProps> = () => {
                 startedAt={startedAt}
                 endedAt={endedAt}
                 featured={featured}
+                url={url}
               />
             )
         )}

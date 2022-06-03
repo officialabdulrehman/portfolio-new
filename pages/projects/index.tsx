@@ -6,6 +6,7 @@ import { companies, featured as featuredData } from "../../data/featured";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { GlobalStateI, SET_PROJECTS } from "../../redux/reduxTypes";
 import { FeaturedI } from "../../types/featuredI";
+import { generateRandomInteger } from "../../util/common";
 import {
   FiltersElement,
   ProjectsElement,
@@ -52,7 +53,10 @@ export const Projects: React.FC<ProjectsProps> = () => {
           </ul>
         </FiltersElement>
         <ProjectsElement>
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence
+            exitBeforeEnter
+            key={generateRandomInteger(0, 1000000)}
+          >
             {projects.map(
               (
                 {
@@ -63,11 +67,12 @@ export const Projects: React.FC<ProjectsProps> = () => {
                   startedAt,
                   endedAt,
                   featured,
+                  url,
                 }: FeaturedI,
                 index: number
               ) => (
                 <Project
-                  key={name}
+                  key={generateRandomInteger(0, 1000000)}
                   name={name}
                   role={role}
                   category={category}
@@ -75,6 +80,7 @@ export const Projects: React.FC<ProjectsProps> = () => {
                   startedAt={startedAt}
                   endedAt={endedAt}
                   featured={featured}
+                  url={url}
                 />
               )
             )}

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { themeI } from "../../themes/themeI";
 import { getRandomColor } from "../../util/common";
 
-export const ProjectElement = styled.div.attrs(
+export const ProjectElement = styled.a.attrs(
   ({ theme }) => ({
     style: {
       "&:hover": {
@@ -20,9 +20,11 @@ export const ProjectElement = styled.div.attrs(
   min-width: 350px;
   cursor: pointer;
   background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
+
   &:hover {
     background: ${() => getRandomColor()};
     color: ${({ theme }: { theme: themeI }) => theme.shade0};
+      transition: 0.3s;
   }
   &:hover h3 {
     color: ${({ theme }: { theme: themeI }) => theme.shade0};

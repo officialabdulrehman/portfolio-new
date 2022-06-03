@@ -7,4 +7,5 @@ export interface FeaturedI {
   endedAt?: Date;
   featured: boolean;
   image?: string;
+  url?: string;
 }

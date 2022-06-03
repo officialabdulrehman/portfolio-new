@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import { themeI } from "../../themes/themeI";
 
-export const SingleFeaturedElement = styled.div`
+export const SingleFeaturedElement = styled.a`
   border-radius: 0.3rem;
   padding: 1rem;
   width: fit-content;
   min-width: 350px;
   cursor: pointer;
   background-color: ${({ theme }: { theme: themeI }) => theme.shade1};
+  transition: 0.3s;
   &:hover {
     background: ${({ theme }: { theme: themeI }) => theme.genRandomColor()};
     color: ${({ theme }: { theme: themeI }) => theme.shade0};

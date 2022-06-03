@@ -16,6 +16,7 @@ const FooterElement = styled.div`
 
     a {
       display: inline;
+      transition: 0.3s;
       &:hover {
         color: ${({ theme }: { theme: themeI }) => theme.primary};
       }

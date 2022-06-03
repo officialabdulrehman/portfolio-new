@@ -7,6 +7,7 @@ export const SingleCommunityWorkElement = styled.div`
   width: fit-content;
   min-width: 300px;
   cursor: pointer;
+  transition: 0.3s;
   background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
   &:hover h3 {
     color: ${({ theme }: { theme: themeI }) => theme.shade0};
@@ -18,12 +19,14 @@ export const SingleCommunityWorkElement = styled.div`
     color: ${({ theme }: { theme: themeI }) => theme.primary};
     letter-spacing: 0.08rem;
     font-weight: 400;
+    transition: 0.3s;
   }
   h4 {
     letter-spacing: 0.03rem;
     font-weight: 400;
     color: ${({ theme }: { theme: themeI }) => theme.shade9};
     // text-align: end;
+    transition: 0.3s;
   }
   p {
     color: ${({ theme }: { theme: themeI }) => theme.shade9};
@@ -48,6 +51,7 @@ export const SingleCommunityWorkElement = styled.div`
   }
   ul {
     li{
+      transition: 0.3s;
       &:hover a {
         color: ${({ theme }: { theme: themeI }) => theme.shade11};
       }

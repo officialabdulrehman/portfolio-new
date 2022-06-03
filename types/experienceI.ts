@@ -3,4 +3,5 @@ export interface ExperienceI {
   role: string;
   startedAt: Date;
   endedAt?: Date;
+  url?: string;
 }

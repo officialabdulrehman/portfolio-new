@@ -19,13 +19,14 @@ const Education: React.FC<EducationProps> = () => {
       </EducationLeftElement>
       <EducationRightElement>
         {educations.map(
-          ({ name, level, city, country }: EducationI, index: number) => (
+          ({ name, level, city, country, url }: EducationI, index: number) => (
             <SingleEducation
               key={index}
               name={name}
               level={level}
               city={city}
               country={country}
+              url={url}
             />
           )
         )}
