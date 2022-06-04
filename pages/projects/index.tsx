@@ -1,6 +1,7 @@
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Dropdown from "../../components/Dropdown/Dropdown";
 import Project from "../../components/Project/Project";
 import { companies, featured as featuredData } from "../../data/featured";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
@@ -43,14 +44,19 @@ export const Projects: React.FC<ProjectsProps> = () => {
     <MainLayout pageTitle="Projects">
       <ProjectsPageElement>
         <FiltersElement>
-          Filters
+          <Dropdown
+            label="Company"
+            items={companies}
+            setCompanyFilter={setCompanyFilter}
+          />
+          {/* Filters
           <ul>
             {companies.map((company: string) => {
               return (
                 <li onClick={() => setCompanyFilter(company)}>{company}</li>
               );
             })}
-          </ul>
+          </ul> */}
         </FiltersElement>
         <ProjectsElement>
           <AnimatePresence
