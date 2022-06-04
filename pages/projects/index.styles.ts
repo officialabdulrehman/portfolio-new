@@ -5,7 +5,7 @@ export const ProjectsPageElement = styled.div`
   background: ${({ theme }: { theme: themeI }) => theme.shade1};
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   min-height: calc(100vh - 142px);
   width: 80vw;
@@ -18,17 +18,17 @@ export const FiltersElement = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
-  min-height: 150px;
+  min-height: 250px;
 `
 export const ProjectsElement = styled.div`
   background: ${({ theme }: { theme: themeI }) => theme.shade1};
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
   flex-wrap: wrap;
-  padding: 3rem 0;
+  /* padding: 3rem 0; */
 `
 
 export default ProjectsPageElement

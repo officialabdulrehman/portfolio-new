@@ -1,4 +1,7 @@
+import { motion } from "framer-motion";
 import React, { Dispatch, SetStateAction } from "react";
+import { dropdownHeaderVariants } from "../../../animations/global";
+import { generateRandomInteger } from "../../../util/common";
 import { DropdownHeaderElement } from "./DropdownHeader.styles";
 
 interface DropdownProps {

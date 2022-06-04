@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import React, { Dispatch, SetStateAction } from "react";
+import { dropdownListItemVariants } from "../../../../animations/global";
 import { DropdownListItemElement } from "./DropdownListItem.styles";
 
 interface DropdownListItemProps {
@@ -11,7 +13,15 @@ export const DropdownListItem: React.FC<DropdownListItemProps> = ({
   setSelection,
 }) => {
   return (
-    <DropdownListItemElement onClick={() => setSelection(item)}>
+    <DropdownListItemElement
+      onClick={() => setSelection(item)}
+      as={motion.a}
+      variants={dropdownListItemVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      key={item}
+    >
       {item}
     </DropdownListItemElement>
   );

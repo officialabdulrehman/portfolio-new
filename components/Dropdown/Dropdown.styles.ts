@@ -8,6 +8,7 @@ export const DropdownElement = styled.div`
   align-items: center;
   text-align: center;
   background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
+  /* background: transparent; */
   padding: 1rem;
   border-radius: 0.3rem;
   min-width: 300px;
@@ -23,4 +24,5 @@ export const UnderlineElement = styled.div`
   height: 0.25rem;
   border-radius: 0.3rem;
   background-color: ${({ theme }: { theme: themeI }) => theme.primary};
+  z-index: 5;
 `;

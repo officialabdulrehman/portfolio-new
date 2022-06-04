@@ -26,7 +26,6 @@ export const Projects: React.FC<ProjectsProps> = () => {
     );
   }, []);
   useEffect(() => {
-    console.log("RERENDER");
     let projects = [];
     if (companyFilter == "All") {
       projects = featuredData;
@@ -47,16 +46,9 @@ export const Projects: React.FC<ProjectsProps> = () => {
           <Dropdown
             label="Company"
             items={companies}
+            defaultCompany="All"
             setCompanyFilter={setCompanyFilter}
           />
-          {/* Filters
-          <ul>
-            {companies.map((company: string) => {
-              return (
-                <li onClick={() => setCompanyFilter(company)}>{company}</li>
-              );
-            })}
-          </ul> */}
         </FiltersElement>
         <ProjectsElement>
           <AnimatePresence

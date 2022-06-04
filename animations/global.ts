@@ -192,3 +192,75 @@ export const projectVariants: Variants = {
     },
   },
 };
+
+export const dropdownHeaderVariants: Variants = {
+  hidden: {
+    // opacity: 0,
+    // y: "50vh",
+    // scale: 1,
+  },
+  visible: {
+    // opacity: 1,
+    // y: 0,
+    // transition: {
+    //   duration: 1,
+    //   ease: "anticipate",
+    //   when: "beforeChildren",
+    //   staggerChildren: 0.5,
+    // },
+  },
+  exit: {
+    // y: "-50vh",
+    // opacity: 0,
+    // transition: {
+    //   ease: "anticipate",
+    //   duration: 1,
+    // },
+  },
+};
+
+export const dropdownListVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: "-10vh",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      duration: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: "-10vh",
+    transition: {
+      ease: "anticipate",
+      duration: 0.5,
+    },
+  },
+};
+
+export const dropdownListItemVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: "-10vh",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      duration: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: "-10vh",
+    transition: {
+      ease: "anticipate",
+      duration: 0.5,
+    },
+  },
+};

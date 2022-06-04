@@ -11,6 +11,7 @@ export const DropdownHeaderElement = styled.div`
   border-radius: 0.3rem;
   cursor: pointer;
   width: 100%;
+  z-index: 5;
   &:hover{
     background-color: ${({ theme }: { theme: themeI }) => theme.primary};
     color: ${({ theme }: { theme: themeI }) => theme.shade0};
