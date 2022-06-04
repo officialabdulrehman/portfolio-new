@@ -30,12 +30,12 @@ export const Dropdown: React.FC<DropdownProps> = ({
   return (
     <DropdownElement>
       <label>{label}</label>
+      <UnderlineElement />
       <DropdownHeader
         selection={selection}
         showList={showList}
         setShowList={setShowList}
       />
-      {showList ? <UnderlineElement /> : ""}
       {showList ? (
         <DropdownList
           items={items}

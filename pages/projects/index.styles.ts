@@ -18,6 +18,7 @@ export const FiltersElement = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
+  min-height: 150px;
 `
 export const ProjectsElement = styled.div`
   background: ${({ theme }: { theme: themeI }) => theme.shade1};

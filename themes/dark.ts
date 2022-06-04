@@ -26,7 +26,7 @@ export const dark: themeI = {
   secondaryDark: "#ef5350",
   genRandomColor: () => {
     const color: string = `hsl(${360 * Math.random()}, ${15 + 70 * Math.random()
-      }%, ${90 + 10 * Math.random()}%)`;
+      }%, ${60 + 10 * Math.random()}%)`;
 
     return color;
   }

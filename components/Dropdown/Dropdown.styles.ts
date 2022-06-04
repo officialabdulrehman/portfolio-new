@@ -14,6 +14,8 @@ export const DropdownElement = styled.div`
   gap: 0.5rem;
   position: fixed;
   z-index: 4;
+  top: 50px;
+  box-shadow: 1px 1px 15px ${({ theme }: { theme: themeI }) => theme.shade1};
 `;
 
 export const UnderlineElement = styled.div`
