@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { DropdownElement } from "./Dropdown.styles";
+import { DropdownElement, UnderlineElement } from "./Dropdown.styles";
 import DropdownHeader from "./DropdownHeader/DropdownHeader";
 import DropdownList from "./DropdownList/DropdownList";
 
@@ -35,6 +35,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
         showList={showList}
         setShowList={setShowList}
       />
+      {showList ? <UnderlineElement /> : ""}
       {showList ? (
         <DropdownList
           items={items}

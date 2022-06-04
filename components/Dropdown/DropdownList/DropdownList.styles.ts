@@ -6,4 +6,6 @@ export const DropdownListElement = styled.div`
   flex-direction: column;
   text-align: center;
   background-color: ${({ theme }: { theme: themeI }) => theme.shade0};
+  gap: 0.5rem;
+  width: 100%;
 `;
