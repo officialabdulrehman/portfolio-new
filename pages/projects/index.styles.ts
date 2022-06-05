@@ -28,6 +28,9 @@ export const ProjectsElement = styled.div`
   align-items: flex-start;
   gap: 2rem;
   flex-wrap: wrap;
+  @media screen and (max-width: 450px) {
+    padding-bottom: 3rem; 
+  }
   /* padding: 3rem 0; */
 `
 

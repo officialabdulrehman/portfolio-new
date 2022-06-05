@@ -21,11 +21,6 @@ export const Projects: React.FC<ProjectsProps> = () => {
   const [companyFilter, setCompanyFilter] = useState("All");
   const dispatch = useDispatch();
   useEffect(() => {
-    alert(
-      "This section of portfolio is underconstruction, but you may still view it"
-    );
-  }, []);
-  useEffect(() => {
     let projects = [];
     if (companyFilter == "All") {
       projects = featuredData;
