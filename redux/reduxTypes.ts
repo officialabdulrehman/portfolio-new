@@ -9,6 +9,7 @@ export interface GlobalStateI {
   experienceModal: boolean
   communityWorkModal: boolean
   projectModal: boolean
+  sidebar: boolean
   projects: FeaturedI[]
 }
 
@@ -26,4 +27,6 @@ export const SHOW_COMMUNITYWORK_MODAL = 'SHOW_COMMUNITYWORK_MODAL';
 export const HIDE_COMMUNITYWORK_MODAL = 'HIDE_COMMUNITYWORK_MODAL';
 export const SHOW_PROJECT_MODAL = 'SHOW_PROJECT_MODAL';
 export const HIDE_PROJECT_MODAL = 'HIDE_PROJECT_MODAL';
+export const SHOW_SIDEBAR = 'SHOW_SIDEBAR';
+export const HIDE_SIDEBAR = 'HIDE_SIDEBAR';
 export const SET_PROJECTS = "SET_PROJECTS"

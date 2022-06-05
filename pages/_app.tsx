@@ -13,6 +13,7 @@ import ExperienceModal from "../components/modals/ExperienceModal/ExperienceModa
 import EducationModal from "../components/modals/EducationModal/EducationModal";
 import CommunityWorkModal from "../components/modals/CommunityWorkModal/CommunityWorkModal";
 import ProjectModal from "../components/modals/ProjectModal/ProjectModal";
+import Sidebar from "../components/modals/Sidebar/Sidebar";
 
 interface MyAppProps extends AppProps {}
 
@@ -45,10 +46,12 @@ const ReduxWrapper = ({ Component, pageProps, router }: MyAppProps) => {
   const communityWorkModal = useSelector(
     (state: GlobalStateI) => state.communityWorkModal
   );
+  const sidebar = useSelector((state: GlobalStateI) => state.sidebar);
   const projectModal = useSelector((state: GlobalStateI) => state.projectModal);
   return (
     <ThemeProvider theme={themes[theme]}>
       <AnimatePresence exitBeforeEnter>
+        {sidebar ? <Sidebar /> : ""}
         {wipModal ? <WIP /> : ""}
         {featuredModal ? <FeaturedModal /> : ""}
         {experienceModal ? <ExperienceModal /> : ""}

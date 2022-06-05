@@ -14,6 +14,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { GlobalStateI, SWITCH_THEME } from "../../redux/reduxTypes";
 import { headerVariants, themeIconAnimations } from "../../animations/global";
+import SidebarToggle from "../SidebarToggle/SidebarToggle";
 
 interface HeaderProps {}
 
@@ -206,6 +207,7 @@ const Header: React.FC<HeaderProps> = () => {
           )}
         </AnimatePresence>
       </ThemeIconElement>
+      <SidebarToggle />
     </HeaderElement>
   );
 };

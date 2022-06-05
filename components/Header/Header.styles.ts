@@ -17,15 +17,29 @@ export const HeaderElement = styled.header`
 export const NavElement = styled.nav`
   margin: auto;
   @media screen and (max-width: 450px) {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     width: 80vw;
     // padding 1rem 0;
-    width: 70vw;
+    width: 70vw; */
+    display: none;
+    height: 0;
+    width: 0;
   }
 `;
+
+export const SidebarToggle = styled.button`
+  display: none;
+  height: 0;
+  width: 0;
+  @media screen and (max-width: 450px) {
+    display: flex;
+    width: auto;
+    height: auto;
+  }
+`
 
 export const AnchorElement = styled.a`
   color: ${({ theme }: { theme: themeI }) => theme.shade11};
@@ -53,6 +67,7 @@ export const ThemeIconElement = styled.div`
   cursor: pointer;
 
   @media screen and (max-width: 450px) {
-    width: 20vw;
+    /* width: 20vw; */
+    margin: 0 2rem;
   }
 `;
