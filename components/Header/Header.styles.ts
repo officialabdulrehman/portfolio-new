@@ -11,7 +11,7 @@ export const HeaderElement = styled.header`
   @media screen and (max-width: 450px) {
     width: 100vw;
     padding: 1rem 0;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
   }
 `;
 

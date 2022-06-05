@@ -6,7 +6,8 @@ export const LogoElement = styled.div`
   margin-top: auto;
   margin-bottom: auto;
   @media screen and (max-width: 450px) {
-    display: none;
+    /* display: none; */
+    padding-left: 1rem;
   }
 `;
 
