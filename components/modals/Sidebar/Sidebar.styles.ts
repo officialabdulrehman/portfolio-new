@@ -79,3 +79,12 @@ export const ThemeIconElement = styled.div`
     margin: 0 1rem;
   }
 `;
+
+export const UnderlineElement = styled.div`
+  width: 80%;
+  height: 0.25rem;
+  border-radius: 0.3rem;
+  margin: auto;
+  margin-top: 2rem;
+  background-color: ${({ theme }: { theme: themeI }) => theme.primary};
+`;

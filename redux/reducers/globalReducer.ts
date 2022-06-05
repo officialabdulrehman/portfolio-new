@@ -120,7 +120,7 @@ const showSidebarModal = (state: GlobalStateI, action: any): GlobalStateI => {
 }
 
 const hideSidebarModal = (state: GlobalStateI, action: any): GlobalStateI => {
-  return updateObject(state, { sidebar: false })
+  return updateObject(state, { sidebar: false, sidebarToggleAnimate: false })
 }
 
 const sidebarToggleAnimate = (state: GlobalStateI, action: any): GlobalStateI => {

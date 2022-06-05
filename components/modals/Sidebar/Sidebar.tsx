@@ -6,6 +6,7 @@ import {
   SidebarElement,
   ThemeIconElement,
   ToggleContainer,
+  UnderlineElement,
 } from "./Sidebar.styles";
 import Image from "next/image";
 import {
@@ -167,6 +168,7 @@ const Sidebar: React.FC<SidebarProps> = ({}) => {
             </ThemeIconElement>
             <SidebarToggle />
           </ToggleContainer>
+          <UnderlineElement />
           <ListContainer>
             <List>
               <ListItem
