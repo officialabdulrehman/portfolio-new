@@ -10,6 +10,7 @@ export interface GlobalStateI {
   communityWorkModal: boolean
   projectModal: boolean
   sidebar: boolean
+  sidebarToggleAnimate: boolean
   projects: FeaturedI[]
 }
 
@@ -29,4 +30,6 @@ export const SHOW_PROJECT_MODAL = 'SHOW_PROJECT_MODAL';
 export const HIDE_PROJECT_MODAL = 'HIDE_PROJECT_MODAL';
 export const SHOW_SIDEBAR = 'SHOW_SIDEBAR';
 export const HIDE_SIDEBAR = 'HIDE_SIDEBAR';
+export const SIDEBAR_TOGGLE_ANIMATE = 'SIDEBAR_TOGGLE_ANIMATE';
+export const SIDEBAR_TOGGLE_UNANIMATE = 'SIDEBAR_TOGGLE_UNANIMATE';
 export const SET_PROJECTS = "SET_PROJECTS"

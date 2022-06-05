@@ -43,12 +43,10 @@ const ConnectComponent: React.FC<ConnectProps> = () => {
           message,
         }
       );
-      console.log(response);
       setLoader(false);
 
       alert("Success");
     } catch (e) {
-      console.log(e);
       alert("Failure");
       setLoader(false);
     }

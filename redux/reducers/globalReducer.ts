@@ -15,7 +15,9 @@ import {
   HIDE_PROJECT_MODAL,
   SET_PROJECTS,
   SHOW_SIDEBAR,
-  HIDE_SIDEBAR
+  HIDE_SIDEBAR,
+  SIDEBAR_TOGGLE_ANIMATE,
+  SIDEBAR_TOGGLE_UNANIMATE
 } from "../reduxTypes";
 import { updateObject } from "../../util/common";
 import { featured } from "../../data/featured";
@@ -29,6 +31,7 @@ const initialState: GlobalStateI = {
   communityWorkModal: false,
   projectModal: false,
   sidebar: false,
+  sidebarToggleAnimate: false,
   projects: featured
 };
 
@@ -49,6 +52,8 @@ export const reducer = (state = initialState, action: any) => {
     case HIDE_PROJECT_MODAL: return hideProjectModal(state, action)
     case SHOW_SIDEBAR: return showSidebarModal(state, action)
     case HIDE_SIDEBAR: return hideSidebarModal(state, action)
+    case SIDEBAR_TOGGLE_ANIMATE: return sidebarToggleAnimate(state, action)
+    case SIDEBAR_TOGGLE_UNANIMATE: return sidebarToggleUnanimate(state, action)
     case SET_PROJECTS: return setProjects(state, action)
     default: return state
   }
@@ -118,7 +123,14 @@ const hideSidebarModal = (state: GlobalStateI, action: any): GlobalStateI => {
   return updateObject(state, { sidebar: false })
 }
 
+const sidebarToggleAnimate = (state: GlobalStateI, action: any): GlobalStateI => {
+  return updateObject(state, { sidebarToggleAnimate: true })
+}
+
+const sidebarToggleUnanimate = (state: GlobalStateI, action: any): GlobalStateI => {
+  return updateObject(state, { sidebarToggleAnimate: false })
+}
+
 const setProjects = (state: GlobalStateI, action: any): GlobalStateI => {
-  console.log("action", action)
   return updateObject(state, { projects: action.payload })
 }

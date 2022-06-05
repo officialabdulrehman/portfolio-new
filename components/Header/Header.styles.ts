@@ -11,19 +11,13 @@ export const HeaderElement = styled.header`
   @media screen and (max-width: 450px) {
     width: 100vw;
     padding: 1rem 0;
+    justify-content: flex-end;
   }
 `;
 
 export const NavElement = styled.nav`
   margin: auto;
   @media screen and (max-width: 450px) {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 80vw;
-    // padding 1rem 0;
-    width: 70vw; */
     display: none;
     height: 0;
     width: 0;
@@ -67,7 +61,7 @@ export const ThemeIconElement = styled.div`
   cursor: pointer;
 
   @media screen and (max-width: 450px) {
-    /* width: 20vw; */
-    margin: 0 2rem;
+    margin: 0 1rem;
+    display: none;
   }
 `;

@@ -1,9 +1,12 @@
 import React from "react";
 import Head from "next/head";
 import Footer from "../../components/Footer/Footer";
-import MainLayoutElement from "./MainLayoutElement.styles";
+import MainLayoutElement, {
+  SidebarToggleContainer,
+} from "./MainLayoutElement.styles";
 import { motion } from "framer-motion";
 import { mainLayoutVariants } from "../../animations/global";
+import SidebarToggle from "../../components/SidebarToggle/SidebarToggle";
 
 interface LayoutProps {
   pageTitle: string;
@@ -37,6 +40,9 @@ const MainLayout: React.FC<LayoutProps> = ({
         >
           {children}
         </motion.div>
+        {/* <SidebarToggleContainer>
+          <SidebarToggle />
+        </SidebarToggleContainer> */}
         <Footer />
       </MainLayoutElement>
     </div>

@@ -4,11 +4,10 @@ import { themeI } from "../../themes/themeI";
 export const SidebarToggleElement = styled.div`
   display: none;
 
-
   @media screen and (max-width: 450px) {
     display: flex;
     background-color: transparent;
-    margin: 0 2rem;
+    margin: 0 1rem;
 
     #nav-icon3 {
     width: 30px;

@@ -264,3 +264,51 @@ export const dropdownListItemVariants: Variants = {
     },
   },
 };
+
+export const sidebarVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    x: '100vw',
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: 'tweek',
+      duration: 0.6,
+      ease: 'easeInOut',
+    }
+  },
+  exit: {
+    opacity: 0,
+    x: '100vw',
+    transition: {
+      ease: 'easeInOut',
+      duration: 1
+    }
+  }
+}
+
+export const sidebarListItemVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    x: '100vw',
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: 'tweek',
+      duration: 0.6,
+      ease: 'easeInOut',
+    }
+  },
+  exit: {
+    opacity: 0,
+    x: '100vw',
+    transition: {
+      ease: 'easeInOut',
+      duration: 1
+    }
+  }
+}

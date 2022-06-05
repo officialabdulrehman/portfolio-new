@@ -68,6 +68,10 @@ const GlobalStyle = createGlobalStyle<Props>`
   z-index: 1;
 }
 
+.sidebarActiveLink {
+    color:  ${({ theme }: { theme: themeI }) => theme.primary};
+  }
+  
 // BELOW IS THE STYLING FOR DEFAULT SCROLLBAR
 
 *::-webkit-scrollbar {
