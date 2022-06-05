@@ -1,5 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import Project from "../../components/Project/Project";
@@ -16,11 +16,13 @@ import {
 
 interface ProjectsProps {}
 
-export const Projects: React.FC<ProjectsProps> = () => {
+export const Projects: React.FC<ProjectsProps> = React.memo(() => {
   const projects = useSelector((state: GlobalStateI) => state.projects);
   const [companyFilter, setCompanyFilter] = useState("All");
   const dispatch = useDispatch();
+  console.log("Projects Component");
   useEffect(() => {
+    console.log("useEffect");
     let projects = [];
     if (companyFilter == "All") {
       projects = featuredData;
@@ -82,6 +84,6 @@ export const Projects: React.FC<ProjectsProps> = () => {
       </ProjectsPageElement>
     </MainLayout>
   );
-};
+});
 
 export default Projects;

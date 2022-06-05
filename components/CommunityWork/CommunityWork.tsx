@@ -11,7 +11,7 @@ const CommunityWork: React.FC<CommunityWorkProps> = (props) => {
   const dispatch = useDispatch();
   return (
     <SingleCommunityWorkElement
-      onClick={() => dispatch({ type: SHOW_COMMUNITYWORK_MODAL })}
+    // onClick={() => dispatch({ type: SHOW_COMMUNITYWORK_MODAL })}
     >
       <h3>{name}</h3>
       <h4>{role}</h4>
