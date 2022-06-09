@@ -32,7 +32,6 @@ export const ProjectsElement = styled.div`
   @media screen and (max-width: 450px) {
     padding-bottom: 3rem; 
   }
-  /* padding: 3rem 0; */
 `
 
 export default ProjectsPageElement
