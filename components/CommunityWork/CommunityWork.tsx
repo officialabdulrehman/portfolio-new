@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { SHOW_COMMUNITYWORK_MODAL } from "../../redux/reduxTypes";
 import { CommunityWorkI } from "../../types/communityWorkI";
+import { extractDate } from "../../util/common";
 import { SingleCommunityWorkElement } from "./CommunityWork.styles";
 
 interface CommunityWorkProps extends CommunityWorkI {}
@@ -27,7 +28,7 @@ const CommunityWork: React.FC<CommunityWorkProps> = (props) => {
         ))}
       </ul>
       <p>
-        {startDate} - {endDate ? endDate : "Present"}
+        {extractDate(startDate)} - {endDate ? endDate : "Present"}
       </p>
     </SingleCommunityWorkElement>
   );

@@ -4,22 +4,22 @@ export const experiences: ExperienceI[] = [
   {
     name: "Centrox AI",
     role: "FullStack Engineer",
-    startedAt: new Date("04-13-2021"),
+    startedAt: new Date("2021-04-13"),
     endedAt: undefined,
     url: "https://www.linkedin.com/company/centroxai/"
   },
   {
     name: "Freelance",
     role: "FullStack Engineer",
-    startedAt: new Date("01-13-2020"),
+    startedAt: new Date("2020-01-13"),
     endedAt: undefined,
     url: "/connect"
   },
   {
     name: "University of Sindh",
     role: "FullStack Developer - Intern",
-    startedAt: new Date("01-01-2020"),
-    endedAt: new Date("01-01-2021"),
+    startedAt: new Date("2020-01-01"),
+    endedAt: new Date("2021-01-01"),
     url: "https://usindh.edu.pk/"
   },
 ];

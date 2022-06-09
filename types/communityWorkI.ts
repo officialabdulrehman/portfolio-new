@@ -2,7 +2,7 @@ export interface CommunityWorkI {
   name: string;
   role: string;
   location: string;
-  startDate: string;
+  startDate: Date;
   endDate?: string;
   duration: string;
   links: Link[];

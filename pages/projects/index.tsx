@@ -20,9 +20,7 @@ export const Projects: React.FC<ProjectsProps> = React.memo(() => {
   const projects = useSelector((state: GlobalStateI) => state.projects);
   const [companyFilter, setCompanyFilter] = useState("All");
   const dispatch = useDispatch();
-  console.log("Projects Component");
   useEffect(() => {
-    console.log("useEffect");
     let projects = [];
     if (companyFilter == "All") {
       projects = featuredData;

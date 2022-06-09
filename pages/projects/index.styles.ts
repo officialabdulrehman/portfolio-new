@@ -18,7 +18,7 @@ export const FiltersElement = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
-  min-height: 250px;
+  min-height: 230px;
 `
 export const ProjectsElement = styled.div`
   background: ${({ theme }: { theme: themeI }) => theme.shade1};
@@ -28,6 +28,7 @@ export const ProjectsElement = styled.div`
   align-items: flex-start;
   gap: 2rem;
   flex-wrap: wrap;
+  padding-bottom: 2rem;
   @media screen and (max-width: 450px) {
     padding-bottom: 3rem; 
   }

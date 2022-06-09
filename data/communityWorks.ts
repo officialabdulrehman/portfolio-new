@@ -5,7 +5,7 @@ export const communityWorks: CommunityWorkI[] = [
     name: "Hyderabad, Student Developer Community ( HSDC )",
     role: "FullStack Developer, Mentor, and Consultant",
     location: "Jamshoro, Sindh, Pakistan",
-    startDate: "April-2020",
+    startDate: new Date("2020-04-01"),
     endDate: undefined,
     duration: "",
     links: [
