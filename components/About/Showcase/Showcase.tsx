@@ -72,7 +72,7 @@ const Showcase: React.FC<ShowcaseProps> = () => {
             </AnchorIconElement>
           </Link>
         </IconsElement>
-        <Link href="https://drive.google.com/file/d/1b3J8UmPM6Svoh7ji2mKvgGIB4R2CEnqK/view?usp=sharing">
+        <Link href="https://drive.google.com/file/d/1YIO-IskeWoJG6FiQkS_aCOkmXqQtrj22/view?usp=sharing">
           <HireElement
             href="https://drive.google.com/file/d/1b3J8UmPM6Svoh7ji2mKvgGIB4R2CEnqK/view?usp=sharing"
             target="_blank"
