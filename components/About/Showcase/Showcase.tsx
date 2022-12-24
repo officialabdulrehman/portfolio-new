@@ -72,9 +72,9 @@ const Showcase: React.FC<ShowcaseProps> = () => {
             </AnchorIconElement>
           </Link>
         </IconsElement>
-        <Link href="https://drive.google.com/file/d/1RcnhWfdx-Q4G0BSQwfbSjrL3_dQxsLxt/view?usp=sharing">
+        <Link href="https://drive.google.com/file/d/13Fqwapkwd7ceL2JVblbpgkoZLmPIKAWa/view?usp=sharing">
           <HireElement
-            href="https://drive.google.com/file/d/1RcnhWfdx-Q4G0BSQwfbSjrL3_dQxsLxt/view?usp=sharing"
+            href="https://drive.google.com/file/d/13Fqwapkwd7ceL2JVblbpgkoZLmPIKAWa/view?usp=sharing"
             target="_blank"
           >
             Check out my Resume!
