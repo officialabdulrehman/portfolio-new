@@ -2,6 +2,17 @@ import { FeaturedI } from "../types/featuredI";
 
 export const featured: FeaturedI[] = [
   {
+    name: "PuppyDog",
+    role: "Fullstack Engineer",
+    category: "Sales",
+    company: "Productbox",
+    startedAt: new Date("2023-01-16"),
+    endedAt: undefined,
+    featured: true,
+    image: undefined,
+    url: "https://puppydog.io/"
+  },
+  {
     name: "Nooberly",
     role: "Sole Backend Engineer",
     category: "Social",
@@ -30,7 +41,7 @@ export const featured: FeaturedI[] = [
     company: "University of Sindh",
     startedAt: new Date("2020-10-01"),
     endedAt: new Date("2021-03-01"),
-    featured: true,
+    featured: false,
     image: undefined,
     url: "https://socialize-graphql.web.app/main"
   },
